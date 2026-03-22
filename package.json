@@ -1,0 +1,8 @@
+{
+  "name": "alameen-build",
+  "version": "1.0.0",
+  "description": "Static generation scripts for Al-Ameen",
+  "scripts": {
+    "build": "node scripts/build.js"
+  }
+}
