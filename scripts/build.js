@@ -52,9 +52,8 @@ const footerHtml = fs.readFileSync(path.join(DIST, 'partials/footer.html'), 'utf
 fs.readdirSync(DIST).forEach(file => {
     if (file.endsWith('.html')) {
         let html = fs.readFileSync(path.join(DIST, file), 'utf-8');
-        html = html.replace('<div id="header-include"></div>', `<div id="header-include">\n${headerHtml}\n</div>`);
-        html = html.replace('<div id="footer-include" class="mt-0"></div>', `<div id="footer-include" class="mt-0">\n${footerHtml}\n</div>`);
-        html = html.replace('<div id="footer-include"></div>', `<div id="footer-include">\n${footerHtml}\n</div>`);
+        html = html.replace(/(<div[^>]*id="header-include"[^>]*>)[\s\S]*?(<\/div>)/i, `$1\n${headerHtml}\n$2`);
+        html = html.replace(/(<div[^>]*id="footer-include"[^>]*>)[\s\S]*?(<\/div>)/i, `$1\n${footerHtml}\n$2`);
         fs.writeFileSync(path.join(DIST, file), html);
         console.log(`  - Injected partials into ${file}`);
     }
