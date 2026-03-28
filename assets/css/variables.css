@@ -1,5 +1,4 @@
-/* Google Fonts Import - Modern pairings with Arabic support */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap');
+/* Fonts loaded via <link> in each page <head> — no render-blocking @import */
 
 :root {
   /* Enhanced Color Palette - Vibrant Educational Theme */

@@ -1,64 +1,38 @@
-// Reveal animations when scrolling
-document.addEventListener('DOMContentLoaded', function() {
-  // Add reveal classes to elements
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-    section.classList.add('reveal-section');
+// Scroll reveal using IntersectionObserver — no scroll event listener needed
+document.addEventListener('DOMContentLoaded', function () {
+  // Tag elements for reveal animation
+  document.querySelectorAll('section').forEach(function (el) {
+    el.classList.add('reveal-section');
   });
-  
-  const titles = document.querySelectorAll('.section__title');
-  titles.forEach(title => {
-    title.classList.add('reveal-title');
+  document.querySelectorAll('.section__title').forEach(function (el) {
+    el.classList.add('reveal-title');
   });
-  
-  const cards = document.querySelectorAll('.card, .event-card, .feature-card, .icon-box');
-  cards.forEach((card, index) => {
-    card.classList.add('reveal-item');
-    card.style.transitionDelay = `${index % 4 * 0.1}s`; // Staggered reveal
+  document.querySelectorAll('.card, .event-card, .feature-card, .icon-box').forEach(function (el, i) {
+    el.classList.add('reveal-item');
+    el.style.transitionDelay = (i % 4 * 0.1) + 's';
   });
-  
-  // Utility function to check if element is in viewport
-  function isInViewport(element, offset = 100) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <= (window.innerHeight - offset || document.documentElement.clientHeight - offset) &&
-      rect.left >= 0 &&
-      rect.bottom >= offset &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+
+  // Bail out gracefully if IntersectionObserver not supported — reveal everything
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal-section, .reveal-title, .reveal-item')
+      .forEach(function (el) { el.classList.add('revealed'); });
+    return;
   }
-  
-  // Function to add reveal class when element is in viewport
-  function revealElements() {
-    const revealSections = document.querySelectorAll('.reveal-section:not(.revealed)');
-    const revealTitles = document.querySelectorAll('.reveal-title:not(.revealed)');
-    const revealItems = document.querySelectorAll('.reveal-item:not(.revealed)');
-    
-    // Reveal sections
-    revealSections.forEach(element => {
-      if (isInViewport(element, 50)) {
-        element.classList.add('revealed');
-      }
-    });
-    
-    // Reveal titles
-    revealTitles.forEach(element => {
-      if (isInViewport(element, 150)) {
-        element.classList.add('revealed');
-      }
-    });
-    
-    // Reveal items
-    revealItems.forEach(element => {
-      if (isInViewport(element, 150)) {
-        element.classList.add('revealed');
-      }
-    });
+
+  function makeObserver(threshold) {
+    return new IntersectionObserver(function (entries, obs) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          obs.unobserve(entry.target); // fire once, then stop watching
+        }
+      });
+    }, { threshold: threshold, rootMargin: '0px 0px -40px 0px' });
   }
-  
-  // Run on scroll and initially
-  window.addEventListener('scroll', revealElements);
-  
-  // Initial check after a short delay to allow page to settle
-  setTimeout(revealElements, 300);
+
+  var sectionObs = makeObserver(0.05);
+  var itemObs    = makeObserver(0.10);
+
+  document.querySelectorAll('.reveal-section').forEach(function (el) { sectionObs.observe(el); });
+  document.querySelectorAll('.reveal-title, .reveal-item').forEach(function (el) { itemObs.observe(el); });
 });

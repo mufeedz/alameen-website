@@ -73,7 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Run on scroll and initially
-    window.addEventListener('scroll', animateStats);
+    // Run on scroll (throttled) and initially
+    var throttle = window.onScrollRAF || function (f) { return f; };
+    window.addEventListener('scroll', throttle(animateStats));
     animateStats();
 });

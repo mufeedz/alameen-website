@@ -1,5 +1,16 @@
 // Main JS for Al-Ameen School
 
+// rAF-throttle utility — limits scroll callbacks to one per animation frame
+window.onScrollRAF = function (handler) {
+  var ticking = false;
+  return function () {
+    if (!ticking) {
+      requestAnimationFrame(function () { handler(); ticking = false; });
+      ticking = true;
+    }
+  };
+};
+
 // Load header and footer partials
 function loadPartial(id, url) {
   fetch(url)
@@ -44,8 +55,8 @@ function initializeBackToTop() {
     checkScroll();
     setTimeout(checkScroll, 100);
     
-    // Check on scroll
-    window.addEventListener('scroll', checkScroll);
+    // Check on scroll (throttled to one call per animation frame)
+    window.addEventListener('scroll', window.onScrollRAF(checkScroll));
     
     // Handle both click and keyboard events
     backToTopButton.addEventListener('click', handleBackToTop);
@@ -373,13 +384,7 @@ function initializeEnhancedUI() {
   links.forEach(link => {
     link.classList.add('transition-all');
   });
-  
-  // Add floating animation to selected elements
-  const floatElements = document.querySelectorAll('.card:nth-child(odd), .event-date');
-  floatElements.forEach(element => {
-    element.classList.add('float-animation');
-  });
-  
+
   // Make navbar items highlight current page
   highlightCurrentPageInNav();
 }
