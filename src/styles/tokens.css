@@ -11,11 +11,11 @@
 :root {
   /* --- Core Brand ----------------------------------------------------------- */
   /* Deep Emerald: primary brand color — nav, headers, primary buttons */
-  --color-primary:       #064E3B;
+  --color-primary:       #003527;
   /* Hover/pressed states for primary surfaces */
-  --color-primary-dark:  #043D2E;
+  --color-primary-dark:  #002117;
   /* Lighter variant for gradients and tinted backgrounds */
-  --color-primary-light: #065F46;
+  --color-primary-light: #0b513d;
 
   /* Metallic Gold: CTAs, badges, highlights, decorative borders */
   --color-accent:        #D4AF37;
@@ -26,19 +26,23 @@
 
   /* --- Backgrounds & Surfaces ---------------------------------------------- */
   /* Warm Paper White — default page background */
-  --color-base:          #F9F9F9;
-  /* Pure white — card and modal surfaces */
-  --color-surface:       #FFFFFF;
-  /* Warm off-white — alternating section backgrounds */
-  --color-surface-alt:   #F3F4EE;
-  /* Warm gray — dividers and borders */
-  --color-separator:     #E4E4D8;
+  --color-base:                    #F9FAF4;
+  /* Surface tonal hierarchy (DESIGN §2) — treat as stacked layers of fine paper */
+  --color-surface:                 #FFFFFF;   /* page base */
+  --color-surface-container-low:   #F3F4EE;   /* alternating sections */
+  --color-surface-container:       #EDEEE8;   /* grouped secondary content */
+  --color-surface-container-high:  #E8E9E3;   /* nav bars, utility strips */
+  /* Legacy alias — kept for backward compat with existing components */
+  --color-surface-alt:             #F3F4EE;
+  /* Outline & borders */
+  --color-separator:               #DDE0D5;
+  --color-outline-variant:         #DDE0D5;   /* ghost border at 15% opacity */
 
   /* --- Text ----------------------------------------------------------------- */
   /* Near-black — primary body text */
-  --color-text:          #1C1C1C;
+  --color-text:          #1A1C19;
   /* Medium gray — secondary / helper text */
-  --color-text-muted:    #5A5A5A;
+  --color-text-muted:    #4A5248;
   /* Light text for use on dark (emerald/primary) surfaces */
   --color-text-on-dark:  #F9F9F9;
 
@@ -151,11 +155,12 @@
    §1.3 ELEVATION / SHADOWS (warm emerald tint)
    ----------------------------------------------------------------------------- */
 :root {
-  --shadow-sm: 0 1px 3px rgba(6, 78, 59, 0.06);
-  --shadow-md: 0 4px 12px rgba(6, 78, 59, 0.08),
-               0 1px 4px  rgba(6, 78, 59, 0.04);
-  --shadow-lg: 0 12px 30px rgba(6, 78, 59, 0.12),
-               0 4px  8px  rgba(6, 78, 59, 0.06);
+  /* Shadows use tinted-ambient approach (DESIGN §4): on-surface tint, never pure black */
+  --shadow-sm: 0 1px 3px  rgba(26, 28, 25, 0.06);
+  --shadow-md: 0 4px 40px rgba(26, 28, 25, 0.04),
+               0 1px 4px  rgba(26, 28, 25, 0.04);
+  --shadow-lg: 0 12px 40px rgba(26, 28, 25, 0.07),
+               0 4px  8px  rgba(26, 28, 25, 0.04);
 }
 
 

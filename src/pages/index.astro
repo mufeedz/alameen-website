@@ -9,22 +9,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const features = [
   {
-    icon: '🏆',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 7 7 7 7m12-3a2.5 2.5 0 0 0 0 5H17s0-3 2.5-5M12 2l1.5 4h-3L12 2z"/><path d="M3.2 14.8a9 9 0 0 1 0-4.6"/><path d="M20.8 14.8a9 9 0 0 0 0-4.6"/><path d="M6.6 18.4a9 9 0 0 1-3.4-3.6"/><path d="M17.4 18.4a9 9 0 0 0 3.4-3.6"/><path d="M12 22a9 9 0 0 1-5.4-1.6"/><path d="M12 22a9 9 0 0 0 5.4-1.6"/><circle cx="12" cy="13" r="3"/></svg>',
     title: 'Excellence in Education',
     body:  'Consistently achieving top academic results with innovative teaching methodologies.',
   },
   {
-    icon: '👩‍🏫',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
     title: 'Experienced Faculty',
     body:  'Dedicated teachers with years of experience in nurturing young minds.',
   },
   {
-    icon: '🏛️',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>',
     title: 'Modern Facilities',
     body:  'State-of-the-art infrastructure and learning resources for comprehensive education.',
   },
   {
-    icon: '🌱',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>',
     title: 'Holistic Development',
     body:  'Focus on character building, moral values, and overall personality development.',
   },
@@ -128,7 +128,7 @@ const heroSlides = [
           ></div>
           <div
             class="absolute inset-0 mix-blend-soft-light"
-            style="background-image: url('/images/girih-about.svg'); background-size: 180px 180px; opacity: 0.18;"
+            style="background-image: url('/images/girih-about.svg'); background-size: 180px 180px; opacity: 0.04;"
             aria-hidden="true"
           ></div>
 
@@ -181,6 +181,7 @@ const heroSlides = [
                   class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)]
                          font-semibold text-sm no-underline
                          bg-[var(--color-accent)] text-[var(--color-primary)]
+                         border-b-2 border-[var(--color-accent-dark)]
                          hover:bg-[var(--color-accent-dark)]
                          shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]
                          transition-all duration-[var(--duration-normal)]
@@ -298,6 +299,7 @@ const heroSlides = [
             class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)]
                    font-semibold text-sm no-underline
                    bg-[var(--color-primary)] text-[var(--color-text-on-dark)]
+                   border-b-2 border-[var(--color-accent)]
                    hover:bg-[var(--color-primary-dark)]
                    shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-md)]
                    transition-all duration-[var(--duration-normal)] hover:-translate-y-0.5"
@@ -347,7 +349,7 @@ const heroSlides = [
        §3 WHY CHOOSE AL-AMEEN — feature cards
        ══════════════════════════════════════════════════ -->
   <section
-    class="section-spacing bg-[var(--color-surface)]"
+    class="section-spacing bg-[var(--color-surface-container-low)]"
     aria-labelledby="why-heading"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -369,19 +371,21 @@ const heroSlides = [
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map(({ icon, title, body }) => (
           <div
-            class="group bg-[var(--color-base)] rounded-[var(--radius-lg)] p-6 text-center
-                   border border-[var(--color-separator)]
-                   shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)]
+            class="group bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-6 text-center
+                   relative overflow-hidden
+                   shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-md)]
                    transition-all duration-[var(--duration-normal)] hover:-translate-y-1"
           >
+            <!-- Girih texture at 5% — DESIGN §5 feature cards signature -->
+            <div class="absolute inset-0 girih-bg opacity-5 pointer-events-none" aria-hidden="true"></div>
             <!-- Icon bubble -->
             <div
-              class="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center text-2xl
-                     bg-primary/8
+              class="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center
+                     bg-primary/8 text-[var(--color-primary)]
                      group-hover:bg-accent/15
                      transition-colors duration-[var(--duration-normal)]"
             >
-              {icon}
+              <Fragment set:html={icon} />
             </div>
             <!-- Gold underline accent -->
             <div class="mx-auto mb-3 w-8 h-0.5 rounded bg-[var(--color-accent)] transition-all duration-[var(--duration-normal)] group-hover:w-12" aria-hidden="true"></div>
@@ -436,6 +440,7 @@ const heroSlides = [
           class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-[var(--radius-md)]
                  font-semibold text-sm no-underline
                  bg-[var(--color-accent)] text-[var(--color-primary)]
+                 border-b-2 border-[var(--color-accent-dark)]
                  hover:bg-[var(--color-accent-dark)]
                  shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]
                  transition-all duration-[var(--duration-normal)] hover:-translate-y-0.5"
@@ -493,7 +498,7 @@ const heroSlides = [
         ].map(({ date, month, title, venue, tag }) => (
           <article
             class="flex gap-4 p-5 bg-[var(--color-surface)] rounded-[var(--radius-lg)]
-                   border border-[var(--color-separator)] shadow-[var(--shadow-sm)]
+                   shadow-[var(--shadow-sm)]
                    hover:shadow-[var(--shadow-md)] hover:-translate-y-0.5
                    transition-all duration-[var(--duration-normal)]"
           >
@@ -554,7 +559,6 @@ const heroSlides = [
           <div
             role="listitem"
             class="group bg-[var(--color-surface)] rounded-[var(--radius-lg)]
-                   border border-[var(--color-separator)]
                    shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)]
                    transition-all duration-[var(--duration-normal)] hover:-translate-y-1
                    overflow-hidden"
@@ -565,9 +569,11 @@ const heroSlides = [
               style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));"
             >
               <div
-                class="w-10 h-10 rounded-full bg-[var(--color-accent)]/20 flex items-center justify-center text-[var(--color-accent)] text-xl flex-shrink-0"
+                class="w-10 h-10 rounded-full bg-[var(--color-accent)]/20 flex items-center justify-center text-[var(--color-accent)] flex-shrink-0"
                 aria-hidden="true"
-              >🏫</div>
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
               <div>
                 <h3
                   class="text-[var(--color-text-on-dark)] font-semibold leading-tight"
@@ -575,7 +581,10 @@ const heroSlides = [
                 >
                   {name}
                 </h3>
-                <p class="text-[var(--color-text-on-dark)]/70 text-xs mt-0.5">📍 {location}</p>
+                <p class="flex items-center gap-1.5 text-[var(--color-text-on-dark)]/70 text-xs mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  {location}
+                </p>
               </div>
             </div>
 
@@ -646,6 +655,7 @@ const heroSlides = [
         class="inline-flex items-center gap-2 px-8 py-3.5 rounded-[var(--radius-md)]
                font-semibold text-sm no-underline
                bg-[var(--color-primary)] text-[var(--color-text-on-dark)]
+               border-b-2 border-[var(--color-accent)]
                hover:bg-[var(--color-primary-dark)]
                shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]
                transition-all duration-[var(--duration-normal)] hover:-translate-y-0.5"

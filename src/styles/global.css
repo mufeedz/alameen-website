@@ -17,21 +17,26 @@
    and maps tokens to Tailwind's design system where named. */
 @theme {
   /* Colors */
-  --color-primary:       #064E3B;
-  --color-primary-dark:  #043D2E;
-  --color-primary-light: #065F46;
-  --color-accent:        #D4AF37;
-  --color-accent-light:  #E8D07A;
-  --color-accent-dark:   #B8960C;
-  --color-base:          #F9F9F9;
-  --color-surface:       #FFFFFF;
-  --color-surface-alt:   #F3F4EE;
-  --color-separator:     #E4E4D8;
-  --color-text:          #1C1C1C;
-  --color-text-muted:    #5A5A5A;
-  --color-text-on-dark:  #F9F9F9;
-  --color-alert:         #C0392B;
-  --color-success:       #1A7F4B;
+  --color-primary:                 #003527;
+  --color-primary-dark:            #002117;
+  --color-primary-light:           #0b513d;
+  --color-accent:                  #D4AF37;
+  --color-accent-light:            #E8D07A;
+  --color-accent-dark:             #B8960C;
+  --color-base:                    #F9FAF4;
+  /* Surface tonal hierarchy (DESIGN §2) */
+  --color-surface:                 #FFFFFF;
+  --color-surface-container-low:   #F3F4EE;
+  --color-surface-container:       #EDEEE8;
+  --color-surface-container-high:  #E8E9E3;
+  --color-surface-alt:             #F3F4EE;
+  --color-separator:               #DDE0D5;
+  --color-outline-variant:         #DDE0D5;
+  --color-text:                    #1A1C19;
+  --color-text-muted:              #4A5248;
+  --color-text-on-dark:            #F9F9F9;
+  --color-alert:                   #C0392B;
+  --color-success:                 #1A7F4B;
 
   /* Typography */
   --font-heading:  'Reem Kufi', serif;
