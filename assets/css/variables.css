@@ -55,8 +55,10 @@
   --radius-lg: 1rem;
 
   /* Custom properties for scalable divider dimensions */
-  --divider-scale-base: 1;
   --divider-height-base: 60px;
   --divider-height-alt: 30px;
   --divider-pattern-size: 45px;
+
+  /* Shared mobile section padding */
+  --section-padding-mobile: 2rem;
 }
