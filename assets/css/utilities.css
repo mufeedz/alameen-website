@@ -4,6 +4,7 @@
 .bg-accent { background: var(--color-accent); color: var(--color-primary); }
 .bg-emerald { background: var(--color-emerald); color: var(--color-white); }
 .bg-light { background: #f8fafc; color: var(--color-text); }
+.bg-neutral { background-color: var(--color-neutral); }
 
 .text-primary { color: var(--color-primary) !important; }
 .text-accent { color: var(--color-accent) !important; }

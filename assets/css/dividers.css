@@ -36,7 +36,7 @@ section {
 
 /* Remove extra margin/padding below hero and above divider */
 .hero + .section-divider {
-  margin-top: calc(-2px * var(--divider-scale-base)); /* Scale the margin with the divider */
+  margin-top: -2px;
 }
 
 /* Geometric Section Divider */
@@ -91,7 +91,7 @@ section + .section-divider {
 
 /* Gradient Divider - replacing wave pattern */
 .gradient-divider {
-  height: calc(6px * var(--divider-scale-base));
+  height: 6px;
   position: relative;
   margin: 0;
   background: linear-gradient(90deg, var(--color-accent) 0%, var(--color-primary-alt) 50%, var(--color-accent) 100%);
@@ -166,70 +166,26 @@ section + .section-divider {
 /* Large screens scaling */
 @media (min-width: 1400px) {
   :root {
-    --divider-scale-base: 1.2;
     --divider-height-base: 72px;
     --divider-height-alt: 36px;
     --divider-pattern-size: 54px;
-  }
-  
-  .hero + .section-divider {
-    margin-top: calc(-2.5px * var(--divider-scale-base)); /* Slightly more negative margin for larger scales */
   }
 }
 
 @media (min-width: 1920px) {
   :root {
-    --divider-scale-base: 1.4;
     --divider-height-base: 84px;
     --divider-height-alt: 42px;
     --divider-pattern-size: 63px;
-  }
-  
-  .hero + .section-divider {
-    margin-top: calc(-3px * var(--divider-scale-base)); /* More adjustment for ultra-large screens */
   }
 }
 
 /* Ultra-wide screens */
 @media (min-width: 2560px) {
   :root {
-    --divider-scale-base: 1.6;
     --divider-height-base: 96px;
     --divider-height-alt: 48px;
     --divider-pattern-size: 72px;
-  }
-  
-  .hero + .section-divider {
-    margin-top: calc(-3.5px * var(--divider-scale-base)); /* Maximum adjustment for ultra-wide screens */
-  }
-}
-
-/* Container query support for modern browsers */
-@supports (container-type: inline-size) {
-  .section-divider,
-  .section-divider-alt,
-  .gradient-divider,
-  .ornament-divider {
-    container-type: inline-size;
-  }
-
-  /* Adaptive scaling based on container width */
-  @container (min-width: 1400px) {
-    .section-divider,
-    .section-divider-alt,
-    .gradient-divider,
-    .ornament-divider {
-      transform: scaleY(1.2);
-    }
-  }
-
-  @container (min-width: 1920px) {
-    .section-divider,
-    .section-divider-alt,
-    .gradient-divider,
-    .ornament-divider {
-      transform: scaleY(1.4);
-    }
   }
 }
 
@@ -243,21 +199,6 @@ section + .section-divider {
   margin-right: calc(-50vw + 50%);
   position: relative;
   box-sizing: border-box;
-  transform: scaleY(var(--divider-scale-base));
-  transform-origin: center top;
-  transition: transform 0.3s ease;
-  will-change: transform; /* Optimize for animations */
-  contain: layout style; /* Performance optimization */
-}
-
-/* Smooth scaling on window resize */
-@media (prefers-reduced-motion: no-preference) {
-  .section-divider,
-  .section-divider-alt,
-  .gradient-divider,
-  .ornament-divider {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), height 0.3s ease;
-  }
 }
 
 /* Reduce motion for accessibility */
@@ -276,21 +217,20 @@ section + .section-divider {
     --space-md: 1rem;
     --space-lg: 1.75rem;
     --space-xl: 2.25rem;
-    --divider-scale-base: 0.75;
     --divider-height-base: 45px;
     --divider-height-alt: 24px;
     --divider-pattern-size: 36px;
   }
-  
+
   section {
-    padding: var(--space-sm) 0 var(--space-md);
+    padding: var(--section-padding-mobile) 0;
   }
-  
+
   /* Mobile-specific hero-divider connection */
   .hero + .section-divider {
-    margin-top: calc(-1.5px * var(--divider-scale-base)); /* Adjusted for mobile scaling */
+    margin-top: -1px;
   }
-    
+
   /* Mobile-specific divider adjustments */
   .section-divider,
   .section-divider-alt,
@@ -298,27 +238,26 @@ section + .section-divider {
   .ornament-divider {
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    transform: scaleY(var(--divider-scale-base));
     width: 100vw;
   }
-  
+
   .section-divider::before {
     left: 0;
     width: 100%;
     background-size: 100% 100%;
   }
-  
+
   .section__title {
     margin-bottom: var(--space-sm);
   }
-  
+
   .container-xl {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 
-/* Large screen optimization for divider scaling */
+/* Large and ultra-wide screen support */
 @media (min-width: 1920px) {
   .section-divider::before {
     left: 0;
@@ -328,7 +267,6 @@ section + .section-divider {
   }
 }
 
-/* Ultra-wide screen support */
 @media (min-width: 2560px) {
   .section-divider::before {
     left: 0;

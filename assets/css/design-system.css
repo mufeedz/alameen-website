@@ -523,7 +523,7 @@
 /* ===== RESPONSIVE BEHAVIOR ===== */
 @media (max-width: 768px) {
   :root {
-    --section-padding-y: var(--spacing-scale-2xl);
+    --section-padding-y: var(--section-padding-mobile);
     --card-gap: var(--spacing-scale-md);
     --card-padding: var(--spacing-scale-md);
   }
