@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const facilities = [
+  { icon: '🖥️', title: 'Smart Classrooms', body: 'Interactive digital boards, multimedia projectors, and modern audio-visual systems for enhanced learning experiences.' },
+  { icon: '🔬', title: 'Science Laboratories', body: 'Fully equipped physics, chemistry, and biology labs with modern instruments for hands-on scientific exploration.' },
+  { icon: '💻', title: 'Computer Lab', body: 'Modern computer facilities with high-speed internet, latest software, and programming environments for digital literacy.' },
+  { icon: '📖', title: 'Library & Resource Center', body: 'Extensive collection of books, digital resources, quiet study areas, and research facilities for academic excellence.' },
+  { icon: '🎵', title: 'Auditorium', body: 'Multi-purpose hall with professional sound system for assemblies, performances, and cultural events.' },
+  { icon: '☕', title: 'Student Canteen', body: 'Nutritious and hygienic meals served daily, providing healthy food options for students and staff during school hours.' },
+];
+
+const leadership = [
+  { icon: '👩‍🏫', stat: '150+', title: 'Faculty', body: 'Qualified educators with advanced degrees and specialized training, committed to nurturing academic excellence and Islamic values.' },
+  { icon: '🏅', stat: '⭐', title: 'State Recognition', body: 'Officially recognized by the State Board and accredited for educational excellence and quality standards.' },
+  { icon: '📊', stat: '100%', title: 'Success Rate', body: 'Consistently achieving outstanding academic results with students excelling in board examinations.' },
+];
+---
+
+<BaseLayout
+  title="Academics"
+  description="Discover Al-Ameen School's comprehensive academic programs, curriculum, and educational achievements."
+  activePage="academics"
+>
+  <!-- Page Header -->
+  <section class="bg-[var(--color-surface-alt)] py-8 border-b border-[var(--color-separator)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: var(--font-size-h1); color: var(--color-primary); font-weight: 700;">
+          Academic Excellence
+        </h1>
+        <p class="text-[var(--color-text-muted)] mt-1">Where the pursuit of knowledge illuminates the path to wisdom and righteous character</p>
+      </div>
+      <nav aria-label="Breadcrumb" class="text-sm text-[var(--color-text-muted)]">
+        <a href="/" class="text-[var(--color-accent)] no-underline hover:underline">Home</a>
+        <span class="mx-1">›</span>
+        <span class="text-[var(--color-primary)] font-semibold">Academics</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Curriculum Overview -->
+  <section class="section-spacing relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.03;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+      <div class="lg:col-span-3">
+        <h2 class="mb-5" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+          Curriculum <span class="gradient-text">Overview</span>
+        </h2>
+        <p class="text-lg text-[var(--color-text)] leading-[var(--leading-relaxed)] mb-4">
+          Al-Ameen School follows a robust curriculum that balances academic excellence with moral education. Our teaching methodology focuses on developing critical thinking, creativity, and problem-solving skills while nurturing Islamic values and character development.
+        </p>
+        <p class="text-[var(--color-text-muted)] leading-[var(--leading-relaxed)]">
+          Our curriculum is designed to meet and exceed the standards set by educational boards, preparing students not just for examinations but for life beyond school.
+        </p>
+      </div>
+      <div class="lg:col-span-2">
+        <div class="overflow-hidden shadow-[var(--shadow-lg)]" style="border-radius: var(--radius-arch); aspect-ratio: 3/4;">
+          <img src="/images/slider-1.webp" alt="Students engaged in academic activities" class="w-full h-full object-cover hover:scale-105 transition-transform duration-[600ms]" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership & Excellence -->
+  <section class="py-14 relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.08;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center text-[var(--color-text-on-dark)] mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); font-weight: 600;">
+        Leadership & <span class="text-[var(--color-accent)]">Excellence</span>
+      </h2>
+      <p class="text-center text-[var(--color-text-on-dark)]/80 mb-10 max-w-2xl mx-auto">Our commitment to academic excellence is reflected in our qualified faculty, institutional recognition, and consistent student achievements.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        {leadership.map(({ icon, stat, title, body }) => (
+          <div class="bg-white/10 backdrop-blur-sm rounded-[var(--radius-lg)] p-6 hover:-translate-y-1 transition-transform duration-[var(--duration-normal)]">
+            <div class="text-4xl mb-3">{icon}</div>
+            <div class="text-2xl font-bold text-[var(--color-accent)] mb-1">{stat}</div>
+            <h3 class="text-[var(--color-text-on-dark)] font-semibold text-lg mb-2">{title}</h3>
+            <p class="text-[var(--color-text-on-dark)]/70 text-sm leading-[var(--leading-relaxed)]">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Campus Facilities -->
+  <section class="section-spacing bg-[var(--color-surface)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        Campus <span class="text-[var(--color-accent)]">Facilities</span>
+      </h2>
+      <div class="w-10 h-1 rounded bg-[var(--color-accent)] mb-4" aria-hidden="true"></div>
+      <p class="text-[var(--color-text-muted)] mb-8 max-w-2xl">Our state-of-the-art facilities are designed to enhance learning, creativity, and overall student development across all academic disciplines.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {facilities.map(({ icon, title, body }) => (
+          <div class="bg-[var(--color-surface)] rounded-[var(--radius-md)] p-6 text-center border border-[var(--color-separator)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)] hover:-translate-y-1 transition-all duration-[var(--duration-normal)]">
+            <div class="text-3xl mb-3">{icon}</div>
+            <h3 class="text-[var(--color-primary)] font-semibold mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h4);">{title}</h3>
+            <p class="text-sm text-[var(--color-text-muted)] leading-[var(--leading-relaxed)]">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 text-center relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.06;" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto px-4">
+      <h2 class="text-[var(--color-text-on-dark)] mb-3" style="font-family: var(--font-heading); font-size: var(--font-size-h2); font-weight: 600;">
+        Interested in Our Academic Programs?
+      </h2>
+      <p class="text-[var(--color-text-on-dark)]/80 text-lg mb-6">Schedule a visit to learn more about our curriculum and teaching approach.</p>
+      <a href="/contact" class="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold text-[var(--color-primary)] bg-[var(--color-accent)] hover:bg-[var(--color-accent-light)] transition-colors duration-[var(--duration-normal)] shadow-[var(--shadow-md)]">
+        📅 Request a School Visit
+      </a>
+    </div>
+  </section>
+</BaseLayout>

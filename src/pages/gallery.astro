@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const categories = ['All', 'Academics', 'Sports', 'Cultural Events', 'Infrastructure'];
+
+const galleryItems = [
+  { src: '/images/gallery/academics-1.webp', alt: 'Science lab session with students engaged in experiments', caption: 'Science Experiments', category: 'academics' },
+  { src: '/images/gallery/academics-2.webp', alt: 'Library session with students reading and researching', caption: 'Library Resources', category: 'academics' },
+  { src: '/images/gallery/sports-1.webp', alt: 'Annual sports day cricket match', caption: 'Cricket Tournament', category: 'sports' },
+  { src: '/images/gallery/sports-2.webp', alt: 'Basketball court during inter-school competition', caption: 'Basketball Match', category: 'sports' },
+  { src: '/images/gallery/events-1.webp', alt: 'Annual Day celebrations with cultural performances', caption: 'Annual Day', category: 'events' },
+  { src: '/images/gallery/events-2.webp', alt: 'Eid celebrations at school with special assembly', caption: 'Eid Celebrations', category: 'events' },
+  { src: '/images/gallery/infrastructure-1.webp', alt: 'Main school building showcasing architecture', caption: 'Main Building', category: 'infrastructure' },
+  { src: '/images/gallery/infrastructure-2.webp', alt: 'Modern computer lab with latest equipment', caption: 'Computer Lab', category: 'infrastructure' },
+];
+---
+
+<BaseLayout
+  title="Gallery"
+  description="Explore Al-Ameen School's photo gallery featuring academic achievements, school events, campus facilities, and student activities."
+  activePage="gallery"
+>
+  <!-- Page Header -->
+  <section class="bg-[var(--color-surface-alt)] py-8 border-b border-[var(--color-separator)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: var(--font-size-h1); color: var(--color-primary); font-weight: 700;">
+          School Gallery
+        </h1>
+        <p class="text-[var(--color-text-muted)] mt-1">Visual highlights of our school's activities, events, and achievements</p>
+      </div>
+      <nav aria-label="Breadcrumb" class="text-sm text-[var(--color-text-muted)]">
+        <a href="/" class="text-[var(--color-accent)] no-underline hover:underline">Home</a>
+        <span class="mx-1">›</span>
+        <span class="text-[var(--color-primary)] font-semibold">Gallery</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section-spacing relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.03;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        Our School in <span class="gradient-text">Pictures</span>
+      </h2>
+      <p class="text-center text-[var(--color-text-muted)] mb-8">Browse through moments captured from various aspects of our school life</p>
+
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-2 mb-8" id="gallery-filters" role="tablist" aria-label="Gallery category filters">
+        {categories.map((cat, i) => (
+          <button
+            type="button"
+            role="tab"
+            aria-selected={i === 0 ? 'true' : 'false'}
+            data-filter={cat === 'All' ? '*' : cat.toLowerCase().replace(' ', '-')}
+            class:list={[
+              'gallery-filter-btn px-4 py-2 rounded-full text-sm font-medium transition-all duration-[var(--duration-normal)] border-2',
+              i === 0
+                ? 'bg-[var(--color-primary)] text-[var(--color-text-on-dark)] border-[var(--color-primary)]'
+                : 'bg-transparent text-[var(--color-primary)] border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-text-on-dark)]'
+            ]}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid" role="region" aria-label="Gallery images" aria-live="polite">
+        {galleryItems.map(item => (
+          <div class="gallery-item group overflow-hidden rounded-[var(--radius-md)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)] transition-all duration-[var(--duration-normal)]" data-category={item.category}>
+            <div class="relative aspect-square overflow-hidden">
+              <img src={item.src} alt={item.alt} class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[600ms]" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[var(--duration-normal)] flex items-end p-3">
+                <span class="text-white text-sm font-medium">{item.caption}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 text-center relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.06;" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto px-4">
+      <h2 class="text-[var(--color-text-on-dark)] mb-3" style="font-family: var(--font-heading); font-size: var(--font-size-h2); font-weight: 600;">
+        Want to See <span class="text-[var(--color-accent)]">More?</span>
+      </h2>
+      <p class="text-[var(--color-text-on-dark)]/80 text-lg mb-6">Visit our school to experience our environment and facilities firsthand.</p>
+      <a href="/contact" class="inline-flex items-center gap-2 px-8 py-3 rounded-full font-bold text-[var(--color-primary)] bg-[var(--color-accent)] hover:bg-[var(--color-accent-light)] transition-colors duration-[var(--duration-normal)] shadow-[var(--shadow-md)]">
+        🏫 Schedule a Visit
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Gallery filtering
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>('.gallery-filter-btn');
+    const items = document.querySelectorAll<HTMLElement>('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter || '*';
+
+        // Update active button
+        filterBtns.forEach(b => {
+          b.classList.remove('bg-[var(--color-primary)]', 'text-[var(--color-text-on-dark)]');
+          b.classList.add('bg-transparent', 'text-[var(--color-primary)]');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('bg-[var(--color-primary)]', 'text-[var(--color-text-on-dark)]');
+        btn.classList.remove('bg-transparent', 'text-[var(--color-primary)]');
+        btn.setAttribute('aria-selected', 'true');
+
+        // Filter items
+        items.forEach(item => {
+          const cat = item.dataset.category || '';
+          const categoryMap: Record<string, string> = {
+            'cultural-events': 'events',
+          };
+          const normalizedFilter = categoryMap[filter] || filter;
+          const show = filter === '*' || cat === normalizedFilter;
+          item.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  });
+</script>

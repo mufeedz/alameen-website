@@ -1,0 +1,1840 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Orientation Day",
+      "date": "2025-06-04",
+      "time": "9:00 AM - 12:00 PM",
+      "location": "Main Auditorium",
+      "campus": "main",
+      "description": "Welcome and orientation program for new students joining grades 1-11.",
+      "details": "The Orientation Day provides an overview of school policies, curriculum, extracurricular activities, and facilities to new students and their parents. Students will also get to meet their teachers and classmates.",
+      "activities": [
+        "Welcome address by Principal",
+        "Introduction to faculty members",
+        "Campus tour",
+        "Interactive Q&A session"
+      ],
+      "organizer": "Administration Department"
+    },
+    {
+      "id": "2",
+      "title": "Bakrid",
+      "date": "2025-06-07",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday in observance of Bakrid festival.",
+      "details": "Bakrid, also known as Eid al-Adha, is an important Islamic festival observed as a school holiday. The school remains closed on this day to respect the religious observance.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "3",
+      "title": "School Re-opening",
+      "date": "2025-06-09",
+      "time": "8:00 AM - 3:30 PM",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "First day of the new academic year for grades 1-12.",
+      "details": "The school reopens for the academic year 2025-2026 for students in grades 1-12. Students will receive their new timetables, books, and other academic materials on this day.",
+      "activities": [
+        "Morning assembly",
+        "Distribution of textbooks and schedules",
+        "Class teacher meetings",
+        "First day orientation activities"
+      ],
+      "organizer": "Academic Department"
+    },
+    {
+      "id": "4",
+      "title": "Inauguration Day",
+      "date": "2025-06-11",
+      "time": "9:30 AM - 12:00 PM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Special inaugural ceremony for LKG and UKG students.",
+      "details": "A special ceremony to welcome the youngest members of our school community. LKG and UKG students will participate in fun activities designed to make their first day memorable and exciting.",
+      "activities": [
+        "Welcome ceremony",
+        "Introduction to kindergarten teachers",
+        "Fun games and activities",
+        "Parent orientation session"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "5",
+      "title": "School Re-opening",
+      "date": "2025-06-16",
+      "time": "9:00 AM - 12:30 PM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "First day of the new academic year for Kindergarten students.",
+      "details": "The school reopens for Kindergarten students for the academic year 2025-2026. This day focuses on helping young students adjust to the school environment through engaging activities.",
+      "activities": [
+        "Welcome activities",
+        "Classroom orientation",        
+        "Interactive play sessions",
+        "Meet and greet with teachers"
+      ],
+      "organizer": "Kindergarten Department"
+    }, 
+    {
+      "id": "6",
+      "title": "Centum Result Holiday",
+      "date": "2025-06-23",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday to celebrate outstanding academic achievements.",
+      "details": "A special holiday granted to celebrate and recognize the exceptional academic performance of students who achieved centum (100%) results in their examinations.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "7",
+      "title": "Debate & Elocution",
+      "date": "2025-06-28",
+      "time": "10:00 AM - 1:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Debate and elocution competition for students of grades 5-6.",
+      "details": "This event provides a platform for students to enhance their public speaking skills and critical thinking abilities through structured debates and eloquent speeches on contemporary topics.",
+      "activities": [
+        "Prepared speech competition",
+        "Extempore speaking rounds",
+        "Group debates on assigned topics",
+        "Award ceremony for top performers"
+      ],
+      "organizer": "English Department"
+    },
+    {
+      "id": "8",
+      "title": "Investiture Voting Ceremony",
+      "date": "2025-06-28",
+      "time": "2:00 PM - 4:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Election process for student leadership positions for grades 6-11.",
+      "details": "The Investiture Voting Ceremony is an important democratic process where students from grades 6-11 elect their student leaders for the academic year. This fosters leadership skills and democratic values.",
+      "activities": [
+        "Candidate speeches",
+        "Voting process",
+        "Ballot counting",
+        "Announcement of results"
+      ],
+      "organizer": "Student Affairs Department"
+    },
+    {
+      "id": "9",
+      "title": "Investiture Ceremony",
+      "date": "2025-07-04",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Formal ceremony to invest powers in elected student leaders from grades 9 & 11.",
+      "details": "The Investiture Ceremony is a prestigious event where elected student council members from grades 9 & 11 are officially appointed to their leadership positions and take an oath to serve the school community responsibly.",
+      "activities": [
+        "Procession of elected leaders",
+        "Badge pinning ceremony",
+        "Oath taking",
+        "Inaugural address by student leaders",
+        "Principal's address"
+      ],
+      "organizer": "Student Affairs Department"
+    },
+    {
+      "id": "10",
+      "title": "Colors Day",
+      "date": "2025-07-08",
+      "time": "9:30 AM - 12:30 PM",
+      "location": "Kindergarten Block and Primary Section",
+      "campus": "main",
+      "description": "A vibrant celebration of colors for Kindergarten and grades 1 & 2 students.",
+      "details": "Colors Day is an exciting event for younger students to learn about colors through various fun activities. Students participate in color-themed games, crafts, and learning experiences.",
+      "activities": [
+        "Color recognition activities",
+        "Art and craft sessions",
+        "Color-themed games",
+        "Story sessions about colors"
+      ],
+      "organizer": "Kindergarten and Primary Department"
+    },
+    {
+      "id": "11",
+      "title": "Science and Math Quiz Competition",
+      "date": "2025-07-10",
+      "time": "10:00 AM - 12:30 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Interactive quiz competition focusing on science and mathematics for grades 3 & 4.",
+      "details": "This competition aims to foster interest in science and mathematics through engaging quiz rounds that challenge students' knowledge and problem-solving abilities in a fun environment.",
+      "activities": [
+        "Multiple choice question rounds",
+        "Practical demonstration round",
+        "Rapid fire questions",
+        "Team problem-solving challenges"
+      ],
+      "organizer": "Science and Mathematics Department"
+    },
+    {
+      "id": "12",
+      "title": "Second Saturday",
+      "date": "2025-07-12",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday on second Saturday of the month.",
+      "details": "As per the school calendar, the second Saturday of every month is observed as a holiday for all students and staff members.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "13",
+      "title": "Education Development Day",
+      "date": "2025-07-15",
+      "time": "8:00 AM - 3:30 PM",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Day dedicated to educational development activities and workshops.",
+      "details": "Education Development Day is observed to emphasize the importance of continuous learning and educational innovation. Various activities are organized to enhance students' learning experiences.",
+      "activities": [
+        "Special assemblies on educational themes",
+        "Interactive workshops",
+        "Educational film screenings",
+        "Project-based learning activities"
+      ],
+      "organizer": "Academic Department"
+    },
+    {
+      "id": "14",
+      "title": "Debate and Elocution Competition",
+      "date": "2025-07-18",
+      "time": "10:00 AM - 1:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Competitive event showcasing oratory skills for grades 5 & 6.",
+      "details": "This competition encourages students to develop their public speaking abilities, critical thinking, and confidence through prepared speeches and impromptu debates on diverse topics.",
+      "activities": [
+        "Prepared speech presentations",
+        "Impromptu speaking round",
+        "Group debates",
+        "Awards for best speakers and debaters"
+      ],
+      "organizer": "English Department"
+    },
+    {
+      "id": "15",
+      "title": "Ist Mid Term Test",
+      "date": "2025-07-21",
+      "time": "8:30 AM - 12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "First mid-term assessment for students from UKG to Grade 9.",
+      "details": "The first mid-term assessment of the academic year evaluates students' understanding of concepts covered thus far. This helps in identifying learning gaps and providing necessary support.",
+      "activities": [
+        "Written examinations",
+        "Practical assessments",
+        "Oral evaluations for kindergarten"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "16",
+      "title": "Science and Math Quiz Competition",
+      "date": "2025-07-22",
+      "time": "10:00 AM - 12:30 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Interactive quiz competition on science and mathematics for grades 5 & 6.",
+      "details": "This quiz competition challenges students' knowledge in science and mathematics through various engaging rounds that promote analytical thinking and subject mastery.",
+      "activities": [
+        "Team quiz rounds",
+        "Visual identification round",
+        "Mathematical problem-solving challenges",
+        "Scientific reasoning questions"
+      ],
+      "organizer": "Science and Mathematics Department"
+    },
+    {
+      "id": "17",
+      "title": "Debate and Elocution Competition",
+      "date": "2025-07-25",
+      "time": "10:00 AM - 1:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Competition to showcase public speaking skills for grades 7 & 8.",
+      "details": "This competition provides a platform for middle school students to demonstrate their oratory skills, critical thinking, and persuasive abilities through structured debates and eloquent speeches.",
+      "activities": [
+        "Prepared speech competition",
+        "Extempore speaking",
+        "Group debate sessions",
+        "Awards ceremony"
+      ],
+      "organizer": "English Department"
+    },
+    {
+      "id": "18",
+      "title": "Mid Term Exam Ends",
+      "date": "2025-07-25",
+      "time": "12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Conclusion of mid-term examinations for grades 7 & 8.",
+      "details": "The last day of mid-term examinations for grades 7 & 8. Students will receive their answer sheets and discuss their performance with subject teachers after the exams.",
+      "activities": [
+        "Final examination paper",
+        "Answer sheet review",
+        "Teacher feedback sessions"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "19",
+      "title": "First-aid, Fire and Safety Workshop",
+      "date": "2025-07-28",
+      "time": "9:00 AM - 1:00 PM",
+      "location": "School Grounds",
+      "campus": "main",
+      "description": "Educational workshop on safety protocols for grades 9-12.",
+      "details": "This essential workshop trains older students in basic first-aid techniques, fire safety measures, and emergency protocols to foster a safety-conscious environment within the school community.",
+      "activities": [
+        "First-aid demonstrations and practice",
+        "Fire evacuation drill",
+        "Safety equipment training",
+        "Emergency response scenarios"
+      ],
+      "organizer": "Health and Safety Department"
+    },
+    {
+      "id": "20",
+      "title": "Grandparents Day",
+      "date": "2025-08-02",
+      "time": "9:30 AM - 11:30 AM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Special celebration honoring the grandparents of Kindergarten students.",
+      "details": "Grandparents Day is a heartwarming event that celebrates the special bond between grandparents and their grandchildren. Kindergarten students perform for their grandparents and engage in activities together.",
+      "activities": [
+        "Cultural performances by children",
+        "Interactive games for grandparents and children",
+        "Photo booth sessions",
+        "Handmade gift presentations"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "21",
+      "title": "Spell Bee",
+      "date": "2025-08-02",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "Primary Block Classrooms",
+      "campus": "main",
+      "description": "Spelling competition for students in grades 1-2.",
+      "details": "The Spell Bee competition helps young students improve their vocabulary, spelling skills, and confidence in using the English language through a series of engaging spelling challenges.",
+      "activities": [
+        "Word pronunciation round",
+        "Spell and write round",
+        "Word meaning challenges",
+        "Final spell-off"
+      ],
+      "organizer": "English Department"
+    },
+    {
+      "id": "22",
+      "title": "Debate Elocution",
+      "date": "2025-08-02",
+      "time": "10:00 AM - 1:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Public speaking event for students in grades 7-8.",
+      "details": "This event showcases the oratory and persuasive skills of middle school students through prepared speeches, impromptu talks, and structured debates on contemporary topics.",
+      "activities": [
+        "Prepared speech presentations",
+        "Impromptu speaking challenges",
+        "Team debates",
+        "Awards for top performers"
+      ],
+      "organizer": "English Department"
+    },
+    {
+      "id": "23",
+      "title": "Van Mahotsav Day",
+      "date": "2025-08-02",
+      "time": "8:30 AM - 10:30 AM",
+      "location": "School Gardens",
+      "campus": "main",
+      "description": "Environmental awareness and tree planting event for grades 1-12.",
+      "details": "Van Mahotsav Day promotes environmental consciousness through tree planting activities and educational sessions about the importance of forests and conservation efforts.",
+      "activities": [
+        "Tree planting ceremony",
+        "Environmental awareness talks",
+        "Eco-friendly art competitions",
+        "Nature conservation pledges"
+      ],
+      "organizer": "Environmental Science Department"
+    },
+    {
+      "id": "24",
+      "title": "Science & Maths Quiz",
+      "date": "2025-08-02",
+      "time": "11:00 AM - 1:30 PM",
+      "location": "Middle School Block",
+      "campus": "main",
+      "description": "Knowledge-testing quiz competition for grades 5-6.",
+      "details": "This interactive quiz challenges students' understanding of scientific principles and mathematical concepts through various rounds designed to promote critical thinking and subject mastery.",
+      "activities": [
+        "Multiple choice rounds",
+        "Rapid fire questions",
+        "Scientific reasoning puzzles",
+        "Mathematical problem-solving challenges"
+      ],
+      "organizer": "Science and Mathematics Department"
+    },
+    {
+      "id": "25",
+      "title": "Dheerachinnamalai",
+      "date": "2025-08-03",
+      "time": "All Day",
+      "location": "Chinnamalai Memorial",
+      "campus": "off-site",
+      "description": "Commemorative event honoring Dheeran Chinnamalai.",
+      "details": "This event commemorates the legacy of Dheeran Chinnamalai, a Tamil freedom fighter. Though not specifically for students (marked as NA), the school acknowledges this important historical figure.",
+      "activities": [
+        "Historical significance discussion",
+        "Cultural remembrance activities"
+      ],
+      "organizer": "Cultural Department"
+    },
+    {
+      "id": "26",
+      "title": "Spell Bee Competition",
+      "date": "2025-08-07",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "Primary Block Classrooms",
+      "campus": "main",
+      "description": "Spelling competition for students in grades 1 & 2.",
+      "details": "This spelling competition aims to enhance students' vocabulary, spelling accuracy, and confidence in English language usage through progressively challenging spelling rounds.",
+      "activities": [
+        "Preliminary spelling rounds",
+        "Word meaning association",
+        "Dictation challenge",
+        "Final championship round"
+      ],
+      "organizer": "English Department"
+    },
+    {
+      "id": "27",
+      "title": "Raksha Bandhan Celebration",
+      "date": "2025-08-08",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Cultural celebration of the Raksha Bandhan festival for grades 5-8.",
+      "details": "This celebration honors the bond between brothers and sisters through the traditional Raksha Bandhan festival. Students participate in cultural activities that highlight the significance of this relationship.",
+      "activities": [
+        "Rakhi making workshop",
+        "Cultural performances",
+        "Story sessions about sibling bonds",
+        "Rakhi tying ceremony"
+      ],
+      "organizer": "Cultural Department"
+    },
+    {
+      "id": "28",
+      "title": "Second Saturday",
+      "date": "2025-08-09",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday on second Saturday of the month.",
+      "details": "As per the school calendar, the second Saturday of every month is observed as a holiday for all students and staff members.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "29",
+      "title": "Spell Bee Competition",
+      "date": "2025-08-13",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "Primary Block Classrooms",
+      "campus": "main",
+      "description": "Spelling competition for students in grades 3 & 4.",
+      "details": "This spelling competition challenges students with age-appropriate vocabulary to improve their spelling skills, word recognition, and language confidence.",
+      "activities": [
+        "Written spelling test",
+        "Oral spelling rounds",
+        "Word meaning challenge",
+        "Spelling bee finals"
+      ],
+      "organizer": "English Department"
+    },
+    {
+      "id": "30",
+      "title": "Sports Day",
+      "date": "2025-08-14",
+      "time": "8:00 AM - 3:00 PM",
+      "location": "School Sports Ground",
+      "campus": "main",
+      "description": "Day of athletic competitions and sports activities for all students.",
+      "details": "Sports Day features various athletic competitions and team sports that showcase students' physical abilities, sportsmanship, and team spirit across different age groups.",      "activities": [
+        "Track and field events",
+        "Team sports competitions",
+        "Relay races",
+        "Prize distribution ceremony"
+      ],
+      "organizer": "Physical Education Department"
+    },
+    {
+      "id": "31",
+      "title": "Sports Day & Independence Day",
+      "date": "2025-08-15",
+      "time": "8:00 AM - 12:00 PM",
+      "location": "School Grounds",
+      "campus": "main",
+      "description": "Combined celebration of Sports Day finals and Independence Day.",
+      "details": "A special event combining the finals of the Sports Day competitions with patriotic celebrations for India's Independence Day, featuring flag hoisting, march past, and cultural performances.",
+      "activities": [
+        "Flag hoisting ceremony",
+        "March past",
+        "Sports finals and award ceremony",
+        "Patriotic cultural performances"
+      ],
+      "organizer": "Physical Education Department and Cultural Committee"
+    },
+    {
+      "id": "32",
+      "title": "Krishna Jayanthi",
+      "date": "2025-08-16",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday for Krishna Jayanthi festival.",
+      "details": "The school observes Krishna Jayanthi (Janmashtami) as a holiday to honor the birth of Lord Krishna, an important Hindu deity and figure in Indian culture.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "33",
+      "title": "Interschool Competition",
+      "date": "2025-08-21",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Competitive events between schools for students in grades 1-4.",
+      "details": "This interschool competition brings together students from various schools to compete in a range of academic, artistic, and performance-based activities, fostering healthy competition and exposure.",
+      "activities": [
+        "Quiz competitions",
+        "Recitation contests",
+        "Art competitions",
+        "Group performances"
+      ],
+      "organizer": "Academic and Cultural Department"
+    },
+    {
+      "id": "34",
+      "title": "Vinayagar Chathurthi",
+      "date": "2025-08-27",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday for Vinayagar Chathurthi festival.",
+      "details": "The school observes Vinayagar Chathurthi (Ganesh Chaturthi) as a holiday to celebrate Lord Ganesha, the remover of obstacles and patron of arts and sciences in Hindu tradition.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "35",
+      "title": "Art/Poster Making Competition",
+      "date": "2025-09-01",
+      "time": "10:00 AM - 1:00 PM",
+      "location": "School Art Studio",
+      "campus": "main",
+      "description": "Creative art competition for all students.",
+      "details": "This competition encourages students to express their creativity and artistic skills through poster making on various themes related to social awareness, environmental conservation, or cultural significance.",
+      "activities": [
+        "Themed poster creation",
+        "Art technique demonstrations",
+        "Gallery walk",
+        "Judging and awards"
+      ],
+      "organizer": "Art Department"
+    },
+    {
+      "id": "36",
+      "title": "Fruits Day",
+      "date": "2026-09-02",
+      "time": "9:30 AM - 11:30 AM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Educational day focused on fruits for Kindergarten students.",
+      "details": "Fruits Day is a fun and educational event where kindergarten students learn about different fruits, their nutritional benefits, and importance in a healthy diet through interactive activities.",
+      "activities": [
+        "Fruit identification games",
+        "Fruit tasting session",
+        "Craft activities with fruit themes",
+        "Nutritional education through stories"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "37",
+      "title": "Teacher's Day Celebration",
+      "date": "2025-09-04",
+      "time": "10:00 AM - 1:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Special event honoring teachers and their contributions.",
+      "details": "Teacher's Day celebrates the invaluable contribution of educators to society. Students prepare special performances and tokens of appreciation to honor their teachers on this significant day.",
+      "activities": [
+        "Cultural performances by students",
+        "Teacher appreciation ceremonies",
+        "Special assembly",
+        "Fun activities organized by senior students"
+      ],
+      "organizer": "Student Council"
+    },
+    {
+      "id": "38",
+      "title": "Milad - Un - Nabi",
+      "date": "2025-09-05",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday observing the birth of Prophet Muhammad.",
+      "details": "The school observes Milad-un-Nabi as a holiday to respect the commemoration of the birth of Prophet Muhammad, an important observance in Islamic tradition.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "39",
+      "title": "Art/Poster Making",
+      "date": "2025-09-06",
+      "time": "10:00 AM - 1:00 PM",
+      "location": "School Art Studio",
+      "campus": "main",
+      "description": "Creative art session for students in grades 1-12.",
+      "details": "This art session provides students with an opportunity to express their creativity through poster making on various themes that promote awareness about social issues, environmental conservation, or cultural heritage.",
+      "activities": [
+        "Guided art session",
+        "Theme-based poster creation",
+        "Art technique demonstrations",
+        "Exhibition of completed works"
+      ],
+      "organizer": "Art Department"
+    },
+    {
+      "id": "40",
+      "title": "Vegetables Day",
+      "date": "2026-09-08",
+      "time": "9:30 AM - 11:30 AM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Educational day focused on vegetables for Kindergarten students.",
+      "details": "Vegetables Day is an interactive learning experience where kindergarten students discover various vegetables, their nutritional benefits, and importance in maintaining good health through fun activities.",
+      "activities": [
+        "Vegetable identification games",
+        "Sensory exploration of vegetables",
+        "Vegetable-themed art and craft",
+        "Stories about healthy eating habits"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "41",
+      "title": "Field Trip",
+      "date": "2025-09-09",
+      "time": "8:00 AM - 4:00 PM",
+      "location": "Off-campus",
+      "campus": "off-site",
+      "description": "Educational excursion for students in grades 3 & 4.",
+      "details": "This field trip provides students with experiential learning opportunities outside the classroom, visiting educational sites that complement their curriculum and expand their understanding of real-world applications.",
+      "activities": [
+        "Guided tours of educational sites",
+        "Interactive learning activities",
+        "Observation and note-taking tasks",
+        "Group reflection and discussion"
+      ],
+      "organizer": "Primary Department"
+    },
+    {
+      "id": "42",
+      "title": "Field Trip",
+      "date": "2025-09-10",
+      "time": "8:00 AM - 4:00 PM",
+      "location": "Off-campus",
+      "campus": "off-site",
+      "description": "Educational excursion for students in grades 5 & 6.",
+      "details": "This field trip offers middle school students hands-on learning experiences at carefully selected locations that enhance their understanding of concepts learned in the classroom and provide real-world context.",
+      "activities": [
+        "Educational site visits",
+        "Guided exploration activities",
+        "Documentation and photography tasks",
+        "Follow-up project work"
+      ],
+      "organizer": "Middle School Department"
+    },
+    {
+      "id": "43",
+      "title": "Milad-un Nabi Celebration",
+      "date": "2025-09-13",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Cultural celebration of Prophet Muhammad's birthday.",
+      "details": "This cultural event celebrates the birth of Prophet Muhammad through educational presentations, recitations, and activities that promote understanding of Islamic traditions and values of peace and compassion.",
+      "activities": [
+        "Educational presentations about Prophet Muhammad",
+        "Recitations and readings",
+        "Cultural displays",
+        "Values-based activities"
+      ],
+      "organizer": "Cultural Department"
+    },
+    {
+      "id": "44",
+      "title": "Quarterly Exam Begins",
+      "date": "2025-09-16",
+      "time": "8:30 AM - 12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "First quarter examinations begin for all students.",
+      "details": "The quarterly examinations assess students' understanding and application of concepts covered during the first term. These exams play an important role in evaluating academic progress.",
+      "activities": [
+        "Written examinations",
+        "Practical assessments where applicable",
+        "Oral examinations for language subjects"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "45",
+      "title": "Quarterly Exam Ends",
+      "date": "2025-09-27",
+      "time": "12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Conclusion of first quarter examinations for all students.",
+      "details": "The final day of quarterly examinations marks the completion of the first formal assessment period of the academic year. Students will receive their results after evaluation is complete.",
+      "activities": [
+        "Final examination papers",
+        "Submission of all answer sheets",
+        "Clearance of examination halls"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "46",
+      "title": "Field Trip & I Term Holiday Starts",
+      "date": "2025-09-29",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Start of term break holidays following field trips.",
+      "details": "This day marks the beginning of the first term holidays following the completion of quarterly examinations and field trips. Students will enjoy a well-deserved break before the next academic term begins.",
+      "activities": [
+        "Field trip for select classes",
+        "Term break begins for all students",
+        "Distribution of holiday homework"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "47",
+      "title": "School Re-opening",
+      "date": "2025-10-06",
+      "time": "8:00 AM - 3:30 PM",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "First day back after term break for all students.",
+      "details": "The school reopens after the first term holidays. Students return to regular classes with quarterly examination results and feedback to guide their academic focus for the next term.",
+      "activities": [
+        "Special assembly",
+        "Distribution of quarterly exam results",
+        "Teacher feedback sessions",
+        "New term orientation"
+      ],
+      "organizer": "Academic Department"
+    },
+    {
+      "id": "48",
+      "title": "PTM Meeting with Parents",
+      "date": "2025-10-09",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "Grade 10 Classrooms",
+      "campus": "main",
+      "description": "Parent-Teacher Meeting for Grade 10 students.",
+      "details": "This Parent-Teacher Meeting provides an opportunity for parents of Grade 10 students to discuss their child's academic performance in the quarterly examinations and set goals for the crucial pre-board preparation year.",
+      "activities": [
+        "One-on-one meetings with subject teachers",
+        "Distribution of detailed progress reports",
+        "Academic counseling",
+        "Board exam preparation guidance"
+      ],
+      "organizer": "Grade 10 Department"
+    },
+    {
+      "id": "49",
+      "title": "PTM Meeting with Parents",
+      "date": "2025-10-10",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "Grade 12 Classrooms",
+      "campus": "main",
+      "description": "Parent-Teacher Meeting for Grade 12 students.",
+      "details": "This critical Parent-Teacher Meeting focuses on Grade 12 students' performance in the quarterly examinations and provides guidance for board examination preparation and higher education planning.",
+      "activities": [
+        "Performance review with subject teachers",
+        "Board examination strategy discussions",
+        "Higher education counseling",
+        "Career guidance sessions"
+      ],
+      "organizer": "Grade 12 Department"
+    },
+    {
+      "id": "50",
+      "title": "PTM Meeting with Parents",
+      "date": "2025-10-11",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "Respective Classrooms",
+      "campus": "main",
+      "description": "Parent-Teacher Meeting for Kindergarten through Grade 9 students.",
+      "details": "This Parent-Teacher Meeting allows parents of students from Kindergarten through Grade 9 to discuss their child's progress, review quarterly examination results, and collaborate with teachers on strategies for improvement.",
+      "activities": [
+        "Individual parent-teacher consultations",
+        "Review of academic and co-curricular performance",
+        "Discussion of learning strategies",
+        "Goal setting for next term"
+      ],
+      "organizer": "Academic Department"
+    },
+    {
+      "id": "51",
+      "title": "PTM Meeting with Parents",
+      "date": "2025-10-13",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "Grade 11 Classrooms",
+      "campus": "main",
+      "description": "Parent-Teacher Meeting for Grade 11 students.",
+      "details": "This Parent-Teacher Meeting focuses on Grade 11 students' adaptation to higher secondary curriculum, their performance in quarterly examinations, and guidance for future academic planning.",
+      "activities": [
+        "Subject-wise performance review",
+        "Stream-specific guidance",
+        "Study habit counseling",
+        "Career path discussions"
+      ],
+      "organizer": "Grade 11 Department"
+    },
+    {
+      "id": "52",
+      "title": "Abdul Kalam Birthday & Greeny Floral Day",
+      "date": "2025-10-15",
+      "time": "9:00 AM - 12:00 PM",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Celebration of Dr. APJ Abdul Kalam's birthday combined with environmental awareness activities.",
+      "details": "This special day honors the birth anniversary of Dr. APJ Abdul Kalam, former President of India and renowned scientist, while also promoting environmental consciousness through greening and floral activities.",
+      "activities": [
+        "Special assembly on Dr. Kalam's contributions",
+        "Tree and flower planting sessions",
+        "Science and environment exhibitions",
+        "Reading circles featuring Dr. Kalam's books"
+      ],
+      "organizer": "Science Department and Eco Club"
+    },
+    {
+      "id": "53",
+      "title": "Food Day",
+      "date": "2025-10-17",
+      "time": "9:30 AM - 11:30 AM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Educational day about nutrition and food for Kindergarten students.",
+      "details": "Food Day provides kindergarten students with a fun and interactive learning experience about different food groups, balanced diets, and healthy eating habits through age-appropriate activities.",
+      "activities": [
+        "Food group identification games",
+        "Healthy eating habits stories",
+        "Simple food preparation activities",
+        "Nutritional education through play"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "54",
+      "title": "Diwali Holiday",
+      "date": "2025-10-18",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday for Diwali festival.",
+      "details": "The school begins its Diwali holiday period, allowing students and staff to celebrate the Festival of Lights with their families and communities.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "55",
+      "title": "Diwali Holiday",
+      "date": "2025-10-20",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Continued school holiday for Diwali festival.",
+      "details": "The school remains closed as part of the extended Diwali holiday period, allowing for the celebration of this important cultural festival.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "56",
+      "title": "Diwali Holiday",
+      "date": "2025-10-21",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Final day of school holiday for Diwali festival.",
+      "details": "The final day of the Diwali holiday period before school resumes normal operations. Students and staff conclude their festival celebrations and prepare to return to school.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "57",
+      "title": "School Re-opening",
+      "date": "2025-10-22",
+      "time": "8:00 AM - 3:30 PM",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "First day back after Diwali holidays for all students.",
+      "details": "The school reopens after the Diwali holiday break. Students return to their regular academic schedule and resume learning activities across all grade levels.",
+      "activities": [
+        "Special post-Diwali assembly",
+        "Regular classes resume",
+        "Collection of holiday homework",
+        "Second term planning"
+      ],
+      "organizer": "Academic Department"
+    },
+    {
+      "id": "58",
+      "title": "Talent Hunt Show",
+      "date": "2025-10-23",
+      "time": "10:00 AM - 1:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Performance showcase for students in grades 1 & 2.",
+      "details": "The Talent Hunt Show provides a platform for young students to showcase their diverse talents in performing arts, music, dance, and other creative expressions in a supportive environment.",
+      "activities": [
+        "Individual talent performances",
+        "Group performances",
+        "Musical presentations",
+        "Dance and dramatic expressions"
+      ],
+      "organizer": "Primary Department and Arts Faculty"
+    },
+    {
+      "id": "59",
+      "title": "Story Telling Competition",
+      "date": "2025-10-25",
+      "time": "9:00 AM - 11:00 AM",
+      "location": "Primary Classrooms",
+      "campus": "main",
+      "description": "Narrative competition for students in grades 1 & 2.",
+      "details": "This competition encourages young students to develop their narrative skills, imagination, and confidence through engaging storytelling presentations using various techniques and props.",
+      "activities": [
+        "Prepared story presentations",
+        "Use of props and visual aids",
+        "Expression and voice modulation practice",
+        "Audience engagement techniques"
+      ],
+      "organizer": "English Department"    },
+    {
+      "id": "61",
+      "title": "Mental Math",
+      "date": "2025-10-25",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Mathematical skills competition for all students.",
+      "details": "The Mental Math competition challenges students' mathematical thinking, calculation speed, and problem-solving abilities without the use of calculators or other aids, promoting mental agility.",
+      "activities": [
+        "Speed calculation rounds",
+        "Mathematical puzzles",
+        "Number pattern recognition",
+        "Applied math problem solving"
+      ],
+      "organizer": "Mathematics Department"
+    },
+    {
+      "id": "62",
+      "title": "Career Guidance Workshop",
+      "date": "2025-10-29",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Educational and career planning workshop for grades 9 & 10.",
+      "details": "This comprehensive workshop provides students with valuable insights into various career paths, educational requirements, and future planning strategies to help them make informed decisions about their academic journey.",
+      "activities": [
+        "Career aptitude assessments",
+        "Presentations by professionals from various fields",
+        "Higher education pathway discussions",
+        "Individual counseling sessions"
+      ],
+      "organizer": "Career Counseling Department"
+    },
+    {
+      "id": "63",
+      "title": "Fancy Dress Competition",
+      "date": "2025-11-05",
+      "time": "9:30 AM - 11:30 AM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Creative costume contest for Kindergarten students.",
+      "details": "The Fancy Dress Competition allows kindergarten students to showcase their creativity and imagination through costumes representing various characters, professions, or concepts in a fun and supportive environment.",
+      "activities": [
+        "Costume parade",
+        "Character introductions by students",
+        "Theme-based performances",
+        "Photo sessions"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "64",
+      "title": "Second Saturday",
+      "date": "2025-11-08",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday on second Saturday of the month.",
+      "details": "As per the school calendar, the second Saturday of every month is observed as a holiday for all students and staff members.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "65",
+      "title": "Story Telling Competition",
+      "date": "2025-11-12",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "Primary Block Classrooms",
+      "campus": "main",
+      "description": "Narrative competition for students in grades 1 & 2.",
+      "details": "This competition encourages young students to develop their storytelling abilities, language skills, and confidence through prepared narratives delivered with expression and creativity.",
+      "activities": [
+        "Story presentations with props",
+        "Character voice differentiation",
+        "Narrative techniques practice",
+        "Audience engagement skills"
+      ],
+      "organizer": "English Department"
+    },
+    {
+      "id": "66",
+      "title": "Children's Day Event",
+      "date": "2025-11-14",
+      "time": "9:00 AM - 1:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Special celebration organized by teachers for Children's Day.",
+      "details": "On Children's Day, teachers organize special performances and activities to celebrate childhood and honor students. This reversal of roles creates a joyful atmosphere where teachers entertain the students.",
+      "activities": [
+        "Cultural performances by teachers",
+        "Fun games and activities",
+        "Special treats and surprises",
+        "Motivational talks and entertainment"
+      ],
+      "organizer": "Teaching Staff"
+    },
+    {
+      "id": "67",
+      "title": "Annual Day",
+      "date": "2025-11-21",
+      "time": "5:00 PM - 9:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Grand cultural showcase and prize distribution ceremony.",
+      "details": "The Annual Day is the school's premier event showcasing students' talents through cultural performances and celebrating academic and co-curricular achievements with formal recognition and awards.",
+      "activities": [
+        "Cultural performances",
+        "Academic and co-curricular prize distribution",
+        "Special performances by school groups",
+        "Chief guest address and celebrations"
+      ],
+      "organizer": "School Administration and Cultural Department"
+    },
+    {
+      "id": "68",
+      "title": "Second Saturday",
+      "date": "2025-11-22",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday on second Saturday of the month.",
+      "details": "As per the school calendar, the second Saturday of every month is observed as a holiday for all students and staff members.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "69",
+      "title": "Science Expo",
+      "date": "2025-11-26",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "School Grounds",
+      "campus": "main",
+      "description": "Exhibition of scientific projects and innovations.",
+      "details": "The Science Expo showcases student projects demonstrating scientific principles, innovations, and research. It provides a platform for students to present their scientific understanding and creativity to peers, teachers, and parents.",
+      "activities": [
+        "Project demonstrations",
+        "Interactive science exhibits",
+        "Expert evaluations",
+        "Science-based competitions"
+      ],
+      "organizer": "Science Department"
+    },
+    {
+      "id": "70",
+      "title": "Transport Day",
+      "date": "2025-11-28",
+      "time": "9:30 AM - 11:30 AM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Educational day about transportation for Kindergarten students.",
+      "details": "Transport Day introduces young students to different modes of transportation, their functions, and basic road safety through age-appropriate activities and visual learning experiences.",
+      "activities": [
+        "Transport models display",
+        "Road safety basics",
+        "Transport-themed games",
+        "Transport-related craft activities"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "71",
+      "title": "JCI GK Competition Level 1",
+      "date": "2025-11-29",
+      "time": "10:00 AM - 12:30 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "General knowledge competition for grades 1-9.",
+      "details": "The first level of the JCI General Knowledge Competition tests students' awareness of current affairs, history, geography, science, and other general knowledge subjects through a structured competitive format.",
+      "activities": [
+        "Written preliminary round",
+        "Multiple choice questions",
+        "Current affairs section",
+        "Subject-specific knowledge testing"
+      ],
+      "organizer": "Academic Department and JCI Partnership"
+    },
+    {
+      "id": "72",
+      "title": "Mental Math Challenge",
+      "date": "2025-12-01",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Mathematical computation competition for grades 3-8.",
+      "details": "This challenge tests students' ability to perform rapid mental calculations without calculators, enhancing numerical skills, arithmetic speed, and mathematical reasoning abilities.",
+      "activities": [
+        "Speed calculation rounds",
+        "Mental arithmetic challenges",
+        "Mathematical pattern recognition",
+        "Logic and reasoning problems"
+      ],
+      "organizer": "Mathematics Department"
+    },
+    {
+      "id": "73",
+      "title": "Cyber Safety Workshop",
+      "date": "2025-12-06",
+      "time": "9:00 AM - 12:00 PM",
+      "location": "Computer Labs",
+      "campus": "main",
+      "description": "Educational workshop on internet safety for grades 7-12.",
+      "details": "This essential workshop educates students about online safety, digital citizenship, cyberbullying prevention, and responsible use of social media and internet resources in the modern digital world.",
+      "activities": [
+        "Cybersecurity awareness sessions",
+        "Digital footprint management",
+        "Social media safety guidelines",
+        "Online threat recognition and prevention"
+      ],
+      "organizer": "Computer Science Department"
+    },
+    {
+      "id": "74",
+      "title": "Half Yearly Exam Starts",
+      "date": "2025-12-15",
+      "time": "8:30 AM - 12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Beginning of mid-year examinations for all students.",
+      "details": "The Half Yearly Examinations assess students' understanding and retention of concepts covered during the first half of the academic year across all subjects in their curriculum.",
+      "activities": [
+        "Written examinations",
+        "Practical assessments",
+        "Project evaluations",
+        "Oral examinations for language subjects"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "75",
+      "title": "Half Yearly Exam Ends",
+      "date": "2025-12-24",
+      "time": "12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Conclusion of mid-year examinations for all students.",
+      "details": "The final day of Half Yearly Examinations marks the completion of the mid-year assessment period. Students will receive their results after the winter break.",
+      "activities": [
+        "Final examination papers",
+        "Completion of all assessments",
+        "Clearance of examination materials"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "76",
+      "title": "Holiday Starts",
+      "date": "2025-12-25",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Beginning of winter break for all students.",
+      "details": "The winter holidays begin following the completion of Half Yearly Examinations. Students will enjoy a well-deserved break during the festive season before returning for the new calendar year.",
+      "activities": [
+        "Holiday homework distribution",
+        "Winter reading recommendations",
+        "Vacation activities suggestions"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "77",
+      "title": "School Re-opening",
+      "date": "2026-01-05",
+      "time": "8:00 AM - 3:30 PM",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "First day back after winter break for all students.",
+      "details": "The school reopens after the winter holidays. Students return to regular classes with Half Yearly Examination results that will guide their academic focus for the remainder of the school year.",
+      "activities": [
+        "Special assembly",
+        "Distribution of half yearly examination results",
+        "Teacher feedback sessions",
+        "New term orientation"
+      ],
+      "organizer": "Academic Department"
+    },
+    {
+      "id": "78",
+      "title": "PTM Meeting with Parents",
+      "date": "2026-01-08",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "Grade 10 Classrooms",
+      "campus": "main",
+      "description": "Parent-Teacher Meeting for Grade 10 students.",
+      "details": "This critical Parent-Teacher Meeting discusses Grade 10 students' performance in the Half Yearly Examinations and provides guidance for board examination preparation in the final months before pre-board examinations.",
+      "activities": [
+        "Review of half yearly examination performance",
+        "Board examination preparation strategies",
+        "Subject-specific improvement plans",
+        "Study schedule recommendations"
+      ],
+      "organizer": "Grade 10 Department"
+    },
+    {
+      "id": "79",
+      "title": "PTM Meeting with Parents",
+      "date": "2026-01-09",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "Grade 12 Classrooms",
+      "campus": "main",
+      "description": "Parent-Teacher Meeting for Grade 12 students.",
+      "details": "This crucial Parent-Teacher Meeting addresses Grade 12 students' performance in the Half Yearly Examinations and provides targeted guidance for board examination and competitive examination preparation.",
+      "activities": [
+        "Subject-wise performance analysis",
+        "Board examination strategies",
+        "Higher education application guidance",
+        "Final preparation planning"
+      ],
+      "organizer": "Grade 12 Department"
+    },
+    {
+      "id": "80",
+      "title": "PTM Meeting with Parents",
+      "date": "2026-01-10",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "Respective Classrooms",
+      "campus": "main",
+      "description": "Parent-Teacher Meeting for Kindergarten through Grade 9 students.",
+      "details": "This Parent-Teacher Meeting provides an opportunity for parents to discuss their child's performance in the Half Yearly Examinations and collaborate with teachers on strategies for improvement in the second half of the academic year.",
+      "activities": [
+        "Discussion of half yearly examination results",
+        "Individualized feedback from teachers",
+        "Progress monitoring plans",
+        "Academic and behavioral goal setting"
+      ],
+      "organizer": "Academic Department"
+    },
+    {
+      "id": "81",
+      "title": "PTM Meeting with Parents",
+      "date": "2026-01-12",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "Grade 11 Classrooms",
+      "campus": "main",
+      "description": "Parent-Teacher Meeting for Grade 11 students.",
+      "details": "This Parent-Teacher Meeting addresses Grade 11 students' performance in the Half Yearly Examinations and provides guidance for the challenging second half of the academic year, laying groundwork for Grade 12 preparation.",
+      "activities": [
+        "Half yearly examination performance review",
+        "Subject-specific feedback and guidance",
+        "Study habit modifications if needed",
+        "Preparation for final examinations"
+      ],
+      "organizer": "Grade 11 Department"
+    },
+    {
+      "id": "82",
+      "title": "Pongal Celebration",
+      "date": "2026-01-13",
+      "time": "9:30 AM - 11:30 AM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Cultural celebration of Pongal harvest festival for Kindergarten students.",
+      "details": "Kindergarten students participate in age-appropriate activities celebrating the traditional Tamil harvest festival of Pongal, learning about cultural traditions and agricultural practices.",
+      "activities": [
+        "Traditional decorations",
+        "Cultural stories about Pongal",
+        "Simple craft activities",
+        "Introduction to harvest traditions"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "83",
+      "title": "Pongal Holidays",
+      "date": "2026-01-14",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday for Pongal festival celebrations.",
+      "details": "The school observes holidays for the Pongal festival, allowing students and staff to participate in this important cultural harvest celebration with their families and communities.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "84",
+      "title": "School Re-opening",
+      "date": "2026-01-19",
+      "time": "8:00 AM - 3:30 PM",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "First day back after Pongal holidays for all students.",
+      "details": "The school reopens after the Pongal festival holidays. Students resume their regular academic schedule with renewed focus on preparation for upcoming examinations and learning activities.",
+      "activities": [
+        "Regular classes resume",
+        "Academic schedule reminders",
+        "Final term preparation plans"
+      ],
+      "organizer": "Academic Department"
+    },
+    {
+      "id": "85",
+      "title": "Coding & Robotics Workshop",
+      "date": "2026-01-21",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "Computer Labs",
+      "campus": "main",
+      "description": "Technical skills workshop for students in grades 7-8.",
+      "details": "This hands-on workshop introduces middle school students to basic coding concepts and robotics applications, fostering computational thinking, problem-solving skills, and interest in STEM fields.",
+      "activities": [
+        "Introduction to coding languages",
+        "Basic robotics programming",
+        "Problem-solving challenges",
+        "Team-based robotics projects"
+      ],
+      "organizer": "Computer Science Department"
+    },
+    {
+      "id": "86",
+      "title": "Kids Expo",
+      "date": "2026-01-23",
+      "time": "9:30 AM - 12:00 PM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Exhibition showcasing kindergarten students' work and activities.",
+      "details": "Kids Expo is a delightful showcase of kindergarten students' artwork, craft projects, and learning outcomes, allowing parents to appreciate their children's progress and creative development.",
+      "activities": [
+        "Display of children's artwork",
+        "Performance of rhymes and songs",
+        "Exhibition of classroom projects",
+        "Interactive learning displays"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "87",
+      "title": "Literacy Day",
+      "date": "2026-01-24",
+      "time": "9:00 AM - 1:00 PM",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Day promoting reading and literacy for Kindergarten through Grade 12.",
+      "details": "Literacy Day celebrates the importance of reading and writing skills through various age-appropriate activities that encourage students to develop a lifelong love for reading and literature.",
+      "activities": [
+        "Book exhibition",
+        "Reading sessions",
+        "Creative writing competitions",
+        "Storytelling events",
+        "Meet with authors (for older grades)"
+      ],
+      "organizer": "English Department and Library"
+    },
+    {
+      "id": "88",
+      "title": "Republic Day",
+      "date": "2026-01-26",
+      "time": "8:00 AM - 11:00 AM",
+      "location": "School Grounds",
+      "campus": "main",
+      "description": "Patriotic celebration of India's Republic Day.",
+      "details": "The school celebrates Republic Day with a flag hoisting ceremony, patriotic performances, and activities that promote civic values and appreciation of India's constitutional democracy.",
+      "activities": [
+        "Flag hoisting ceremony",
+        "March past",
+        "Patriotic cultural performances",
+        "Speeches on constitutional values"
+      ],
+      "organizer": "Cultural Department"
+    },
+    {
+      "id": "89",
+      "title": "Mock Board Exams Starts",
+      "date": "2026-01-27",
+      "time": "8:30 AM - 12:30 PM",
+      "location": "Examination Halls",
+      "campus": "main",
+      "description": "Practice board examinations for grades 9 & 10.",
+      "details": "Mock Board Examinations provide students with a realistic experience of board examination conditions, helping them prepare for the actual board exams by identifying strengths and areas for improvement.",
+      "activities": [
+        "Subject-wise examination papers",
+        "Strict board exam conditions",
+        "Time management practice",
+        "Complete syllabus testing"
+      ],
+      "organizer": "Examination Department"    },
+    {
+      "id": "91",
+      "title": "Pre Board Exams Starts",
+      "date": "2026-02-02",
+      "time": "8:30 AM - 12:30 PM",
+      "location": "Examination Halls",
+      "campus": "main",
+      "description": "Final practice examinations for grades 11 & 12 before board exams.",
+      "details": "Pre-Board Examinations provide a comprehensive assessment of students' preparation for board examinations, covering the complete syllabus under examination conditions identical to the actual board exams.",
+      "activities": [
+        "Subject-wise examination papers",
+        "Board exam format and timing",
+        "Complete syllabus testing",
+        "Examination stress management"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "92",
+      "title": "Pre Board Exams Ends",
+      "date": "2026-02-06",
+      "time": "12:30 PM",
+      "location": "Examination Halls",
+      "campus": "main",
+      "description": "Conclusion of final practice examinations for grades 11 & 12.",
+      "details": "The final day of Pre-Board Examinations for grades 11 & 12. Detailed performance analysis and guidance will be provided to help students prepare for their upcoming board examinations.",
+      "activities": [
+        "Final examination paper",
+        "Collection of all answer sheets",
+        "Preparation for result analysis"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "93",
+      "title": "State Level GK Competition",
+      "date": "2026-02-10",
+      "time": "9:00 AM - 3:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "High-level general knowledge competition for select students.",
+      "details": "This prestigious state-level General Knowledge Competition brings together top-performing students (Excel 8) to compete against participants from other schools, showcasing their knowledge across various subjects.",
+      "activities": [
+        "Written elimination round",
+        "Audio-visual question rounds",
+        "Rapid fire challenge",
+        "Final quiz showdown"
+      ],
+      "organizer": "Academic Department"
+    },
+    {
+      "id": "94",
+      "title": "Green Day (Sapling Trees)",
+      "date": "2026-02-12",
+      "time": "9:30 AM - 11:30 AM",
+      "location": "Kindergarten Block and Gardens",
+      "campus": "main",
+      "description": "Environmental awareness day for Kindergarten students.",
+      "details": "Green Day introduces young students to environmental consciousness through tree planting and nature-based activities, fostering an early appreciation for environmental stewardship.",
+      "activities": [
+        "Sapling planting",
+        "Nature walks",
+        "Environmental stories and songs",
+        "Plant-based craft activities"
+      ],
+      "organizer": "Kindergarten Department and Eco Club"
+    },
+    {
+      "id": "95",
+      "title": "II Mid Term Exam Starts",
+      "date": "2026-02-16",
+      "time": "8:30 AM - 12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Second mid-term assessment for UKG to Grade 9 students.",
+      "details": "The second mid-term examinations assess students' understanding of concepts covered since the half-yearly examinations, providing important feedback before the final annual examinations.",
+      "activities": [
+        "Written examinations",
+        "Practical assessments where applicable",
+        "Oral evaluations for kindergarten"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "96",
+      "title": "Ramzan Fasting Starts",
+      "date": "2026-02-19",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Recognition of the beginning of Ramzan fasting period.",
+      "details": "The school acknowledges the beginning of the holy month of Ramzan (Ramadan), making appropriate accommodations for students who are fasting while maintaining regular academic schedules.",
+      "activities": [
+        "Regular school activities with accommodations",
+        "Cultural awareness sessions"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "97",
+      "title": "Farewell Day",
+      "date": "2026-02-21",
+      "time": "10:00 AM - 2:00 PM",
+      "location": "School Auditorium",
+      "campus": "main",
+      "description": "Graduation ceremony for outgoing students of grades 11 & 12.",
+      "details": "This emotional ceremony marks the end of the school journey for graduating students, celebrating their achievements and wishing them success as they move to higher education and future endeavors.",
+      "activities": [
+        "Formal farewell ceremony",
+        "Cultural performances by juniors",
+        "Speeches by graduating students",
+        "Memorabilia presentation",
+        "Lunch reception"
+      ],
+      "organizer": "Student Council and School Administration"
+    },
+    {
+      "id": "98",
+      "title": "Graduation Day",
+      "date": "2026-02-27",
+      "time": "10:00 AM - 12:00 PM",
+      "location": "Kindergarten Block",
+      "campus": "main",
+      "description": "Ceremony celebrating Kindergarten students completing their early education.",
+      "details": "Graduation Day celebrates the milestone achievement of kindergarten students as they complete their early education and prepare to transition to primary school, marking their first academic graduation.",
+      "activities": [
+        "Graduation cap and gown ceremony",
+        "Certificate distribution",
+        "Simple performances by children",
+        "Photo sessions with parents",
+        "Refreshments"
+      ],
+      "organizer": "Kindergarten Department"
+    },
+    {
+      "id": "99",
+      "title": "Second Saturday",
+      "date": "2026-02-28",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday on second Saturday of the month.",
+      "details": "As per the school calendar, the second Saturday of every month is observed as a holiday for all students and staff members.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "100",
+      "title": "Annual Exam Begins",
+      "date": "2026-03-03",
+      "time": "8:30 AM - 12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Final examinations for Grade 9 students.",
+      "details": "The Annual Examinations for Grade 9 begin, assessing students' understanding and application of concepts covered throughout the academic year across all subjects in their curriculum.",
+      "activities": [
+        "Written examinations",
+        "Practical assessments",
+        "Project evaluations"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "101",
+      "title": "Annual Exam Ends",
+      "date": "2026-03-13",
+      "time": "12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Conclusion of final examinations for Grade 9 students.",
+      "details": "The Annual Examinations for Grade 9 conclude. These comprehensive assessments determine students' final grades and readiness for promotion to the next academic level.",
+      "activities": [
+        "Final examination papers",
+        "Collection of all answer sheets",
+        "End of academic year procedures"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "102",
+      "title": "Half Working Day Lalatul-Qadr",
+      "date": "2026-03-16",
+      "time": "8:00 AM - 12:00 PM",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Early dismissal in observance of Lailatul Qadr.",
+      "details": "The school observes a half working day in respect for Lailatul Qadr (Night of Power), an important night during the holy month of Ramzan in Islamic tradition.",
+      "activities": [
+        "Regular classes until noon",
+        "Early dismissal at 12:00 PM"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "103",
+      "title": "Holiday Starts",
+      "date": "2026-03-17",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Beginning of pre-festival holidays.",
+      "details": "The school begins a short holiday period leading up to several cultural and religious observances that occur in mid-March.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "104",
+      "title": "Holiday",
+      "date": "2026-03-18",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Continued school holiday.",
+      "details": "The school remains closed as part of the holiday period for cultural and religious observances.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "105",
+      "title": "Telugu New Year",
+      "date": "2026-03-19",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday for Telugu New Year celebration.",
+      "details": "The school observes a holiday for Telugu New Year (Ugadi), an important cultural festival marking the beginning of a new year according to the Telugu lunar calendar.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "106",
+      "title": "Ramzan / Eid ul Fitr",
+      "date": "2026-03-20",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday for Eid ul Fitr celebration.",
+      "details": "The school observes a holiday for Eid ul Fitr, marking the end of the holy month of Ramzan and celebrating the completion of the fasting period with prayers and festivities.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "107",
+      "title": "Holiday",
+      "date": "2026-03-21",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Extended holiday after Eid ul Fitr.",
+      "details": "The school remains closed, extending the holiday period following Eid ul Fitr celebrations.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "108",
+      "title": "Annual Exam Begins",
+      "date": "2026-03-23",
+      "time": "8:30 AM - 12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Final examinations for Kindergarten to Grade 5 students.",
+      "details": "The Annual Examinations begin for Kindergarten through Grade 5 students, assessing their learning outcomes and academic progress throughout the year in an age-appropriate manner.",
+      "activities": [
+        "Written examinations",
+        "Activity-based assessments for kindergarten",
+        "Subject-specific evaluations"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "109",
+      "title": "Annual Exam Begins",
+      "date": "2026-04-01",
+      "time": "8:30 AM - 12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Final examinations for Grade 6-8 students.",
+      "details": "The Annual Examinations begin for students in Grades 6-8, comprehensively assessing their understanding and application of concepts covered throughout the academic year.",
+      "activities": [
+        "Written examinations",
+        "Practical assessments",
+        "Subject-wise evaluation"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "110",
+      "title": "Annual Exam Ends",
+      "date": "2026-04-02",
+      "time": "12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Conclusion of final examinations for Kindergarten to Grade 5.",
+      "details": "The Annual Examinations conclude for Kindergarten through Grade 5 students. These assessments help determine their readiness for the next academic level.",
+      "activities": [
+        "Final examination papers",
+        "Collection of all answer sheets",
+        "End-of-year procedures"
+      ],
+      "organizer": "Examination Department"
+    },
+    {
+      "id": "111",
+      "title": "Good Friday",
+      "date": "2026-04-03",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "School holiday for Good Friday observance.",
+      "details": "The school observes Good Friday as a holiday, respecting the Christian commemoration of the crucifixion of Jesus Christ and his death at Calvary.",
+      "activities": [
+        "No school activities scheduled"
+      ],
+      "organizer": "School Administration"
+    },
+    {
+      "id": "112",
+      "title": "Annual Exam Ends",
+      "date": "2026-04-13",
+      "time": "12:30 PM",
+      "location": "Classrooms",
+      "campus": "main",
+      "description": "Conclusion of final examinations for Grade 6-8 students.",
+      "details": "The Annual Examinations conclude for students in Grades 6-8. These comprehensive assessments determine students' final grades and readiness for promotion to the next academic level.",
+      "activities": [
+        "Final examination papers",
+        "Collection of all answer sheets",
+        "End-of-year procedures"
+      ],
+      "organizer": "Examination Department"
+    },    {
+      "id": "113",
+      "title": "Summer Vacation Starts",
+      "date": "2026-04-14",
+      "time": "All Day",
+      "location": "School Campus",
+      "campus": "main",
+      "description": "Beginning of summer break for Grade 6-8 students.",
+      "details": "The summer vacation begins for students in Grades 6-8 following the completion of their Annual Examinations. The school will reopen for the new academic year as per the next year's calendar.",
+      "activities": [
+        "Distribution of report cards",
+        "Summer reading recommendations",
+        "Vacation activity suggestions"
+      ],
+      "organizer": "School Administration"
+    }
+  ],
+  "holidays": [
+    {
+      "id": "h1",
+      "title": "Bakrid",
+      "date": "2025-06-07",
+      "description": "Eid al-Adha - Festival of Sacrifice"
+    },
+    {
+      "id": "h2", 
+      "title": "Second Saturday",
+      "date": "2025-07-12",
+      "description": "Monthly second Saturday holiday"
+    },
+    {
+      "id": "h3",
+      "title": "Independence Day",
+      "date": "2025-08-15", 
+      "description": "National holiday celebrating India's independence"
+    },
+    {
+      "id": "h4",
+      "title": "Muharram",
+      "date": "2025-08-16",
+      "description": "Islamic New Year observance"
+    },
+    {
+      "id": "h5",
+      "title": "Milad-un-Nabi",
+      "date": "2025-09-05",
+      "description": "Birthday of Prophet Muhammad (PBUH)"
+    }
+  ]
+}

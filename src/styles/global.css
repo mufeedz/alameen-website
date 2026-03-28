@@ -1,0 +1,219 @@
+/* =============================================================================
+   Al-Ameen School — Global Stylesheet
+   Import order:
+     1. tokens.css   — all CSS custom properties (colors, type, spacing)
+     2. tailwindcss  — Tailwind v4 base/utilities (respects tokens automatically)
+     3. Base resets  — apply tokens to HTML primitives
+   ============================================================================= */
+
+/* 1. Design tokens — must be first so @theme can consume them */
+@import "./tokens.css";
+
+/* 2. Tailwind v4 (base + utilities + JIT) */
+@import "tailwindcss";
+
+/* 3. Expose tokens to Tailwind's theme engine
+   This lets you use classes like bg-[var(--color-primary)] automatically,
+   and maps tokens to Tailwind's design system where named. */
+@theme {
+  /* Colors */
+  --color-primary:       #064E3B;
+  --color-primary-dark:  #043D2E;
+  --color-primary-light: #065F46;
+  --color-accent:        #D4AF37;
+  --color-accent-light:  #E8D07A;
+  --color-accent-dark:   #B8960C;
+  --color-base:          #F9F9F9;
+  --color-surface:       #FFFFFF;
+  --color-surface-alt:   #F3F4EE;
+  --color-separator:     #E4E4D8;
+  --color-text:          #1C1C1C;
+  --color-text-muted:    #5A5A5A;
+  --color-text-on-dark:  #F9F9F9;
+  --color-alert:         #C0392B;
+  --color-success:       #1A7F4B;
+
+  /* Typography */
+  --font-heading:  'Reem Kufi', serif;
+  --font-display:  'Amiri', serif;
+  --font-body:     'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 20px;
+}
+
+/* -----------------------------------------------------------------------------
+   Base resets — apply tokens to raw HTML elements.
+   Keeps component CSS clean (no repeated base declarations).
+   ----------------------------------------------------------------------------- */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    /* Smooth scroll — respects prefers-reduced-motion via tokens */
+    scroll-behavior: smooth;
+    /* Prevent font inflation on mobile (especially Android) */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    /* Improve font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text);
+    background-color: var(--color-base);
+  }
+
+  /* --- Headings ------------------------------------------------------------ */
+  h1 {
+    font-family: var(--font-display);    /* Amiri for display impact */
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-primary);
+  }
+
+  h2 {
+    font-family: var(--font-heading);   /* Reem Kufi for section headings */
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-semi);
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-primary);
+  }
+
+  h3 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-semi);
+    line-height: var(--leading-snug);
+    color: var(--color-primary);
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--leading-normal);
+    color: var(--color-primary);
+  }
+
+  /* --- Body copy ----------------------------------------------------------- */
+  p {
+    font-size: var(--font-size-body);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text);
+  }
+
+  small, .text-small {
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+  }
+
+  /* --- Links --------------------------------------------------------------- */
+  a {
+    color: var(--color-primary);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    transition: color var(--duration-fast) var(--ease-standard);
+  }
+
+  a:hover {
+    color: var(--color-primary-light);
+  }
+
+  /* --- Focus (keyboard nav accessibility) ---------------------------------- */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+  }
+
+  /* --- Images -------------------------------------------------------------- */
+  img, video, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* --- Horizontal rule ----------------------------------------------------- */
+  hr {
+    border: none;
+    border-top: 1px solid var(--color-separator);
+    margin: var(--space-8) 0;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Utility layer — one-liners used across multiple components.
+   Defined here so Tailwind's purge keeps them.
+   ----------------------------------------------------------------------------- */
+@layer utilities {
+  /* Text color shortcuts */
+  .text-primary     { color: var(--color-primary); }
+  .text-accent      { color: var(--color-accent); }
+  .text-muted       { color: var(--color-text-muted); }
+  .text-on-dark     { color: var(--color-text-on-dark); }
+
+  /* Background shortcuts */
+  .bg-primary       { background-color: var(--color-primary); }
+  .bg-accent        { background-color: var(--color-accent); }
+  .bg-surface       { background-color: var(--color-surface); }
+  .bg-surface-alt   { background-color: var(--color-surface-alt); }
+
+  /* Section spacing */
+  .section-spacing {
+    padding-top:    var(--section-pad-y-mobile);
+    padding-bottom: var(--section-pad-y-mobile);
+  }
+
+  /* Gradient text (emerald → gold) */
+  .gradient-text {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary-light) 0%,
+      var(--color-accent)        100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Arch-shaped image containers (§1.5) */
+  .arch-container {
+    border-radius: var(--radius-arch);
+    overflow: hidden;
+  }
+
+  /* Subtle Girih pattern overlay (opacity applied via SVG fill, not here) */
+  .girih-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60 0L75 20H45L60 0ZM0 60L20 45V75L0 60ZM120 60L100 75V45L120 60ZM60 120L45 100H75L60 120ZM60 40L80 60L60 80L40 60Z' fill='%23064E3B' fill-opacity='0.04'/%3E%3C/svg%3E");
+    background-size: 120px 120px;
+    background-repeat: repeat;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Responsive: upgrade section padding on larger screens
+   ----------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  @layer utilities {
+    .section-spacing {
+      padding-top:    var(--section-pad-y-desktop);
+      padding-bottom: var(--section-pad-y-desktop);
+    }
+  }
+}

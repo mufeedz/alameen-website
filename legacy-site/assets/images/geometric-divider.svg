@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <!-- Smooth wave pattern with improved scaling -->
+  <path d="M0 0H1440V60C1200 35 960 55 720 45C480 35 240 20 0 45V0Z" fill="#f2b436"/>
+  
+  <!-- Scalable wave pattern for better responsiveness -->
+  <defs>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f2b436;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f7d68a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f2b436;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Enhanced wave with gradient -->
+  <path d="M0 0H1440V60C1200 35 960 55 720 45C480 35 240 20 0 45V0Z" fill="url(#waveGradient)"/>
+</svg>

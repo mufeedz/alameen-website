@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const campuses = [
+  {
+    id: 'main-campus',
+    name: 'Karungalpalayam',
+    color: 'bg-[var(--color-surface)]',
+    overview: 'The Karungalpalayam Campus, established in 1983, serves as the heart of Al-Ameen School\'s educational mission. Located on Cauvery Road in Karungalpalayam, this campus represents 42 years of academic excellence and Islamic values.',
+    stats: [
+      { icon: '📅', label: 'Established', value: '1983 (42 Years)' },
+      { icon: '📍', label: 'Location', value: 'Cauvery Road' },
+      { icon: '🏢', label: 'Campus Size', value: '0.54 Acres (23,588 sq. ft.)' },
+      { icon: '👥', label: 'Education Model', value: 'Co-ed & Girls Only' },
+    ],
+    contact: { address: 'No 180/6, Cauvery Road, Karungalpalayam-638003 (Opposite Government School)', phone: '+91 12345 67890', email: 'main@alameen.edu' },
+    leadership: { principal: 'M Arshath Niha', vp: 'G Shakila', admin: 'N Nirmala' },
+    timings: { morning: '8:00 AM - 12:30 PM', afternoon: '1:30 PM - 4:00 PM', office: '8:00 AM - 4:00 PM', days: 'Monday - Friday' },
+    images: ['/images/slider-1.webp', '/images/slider-2.webp', '/images/slider-3.webp'],
+  },
+  {
+    id: 'annex-campus',
+    name: 'Ellapalayam',
+    color: 'bg-[var(--color-surface-alt)]',
+    overview: 'The Ellapalayam Campus represents our progressive approach to education, serving students from Grades 1-12 in a fully co-educational environment. Located in Villarasampatti, Erode, this modern 1.5-acre campus was designed to foster collaborative learning and holistic development.',
+    stats: [
+      { icon: '📅', label: 'Established', value: '1992 (33 Years)' },
+      { icon: '📍', label: 'Location', value: 'Villarasampatti, Erode' },
+      { icon: '🏢', label: 'Campus Size', value: '1.5 Acres (65,340 sq. ft.)' },
+      { icon: '👥', label: 'Education Model', value: 'Co-educational' },
+    ],
+    contact: { address: 'Villarasampatti, Ellapalayam-638107', phone: '+91 12345 67891', email: 'annex@alameen.edu' },
+    leadership: { principal: 'A K Amina Bibi', vp: 'P Kavitha', admin: 'K Rajendran' },
+    timings: { morning: '8:00 AM - 12:00 PM', afternoon: '1:00 PM - 3:30 PM', office: '8:00 AM - 3:30 PM', days: 'Monday - Friday' },
+    images: ['/images/slider-3.webp', '/images/slider-1.webp', '/images/slider-2.webp'],
+  },
+];
+---
+
+<BaseLayout
+  title="Campuses"
+  description="Explore Al-Ameen School's campuses, facilities, and locations in Erode."
+  activePage="campuses"
+>
+  <!-- Page Header -->
+  <section class="bg-[var(--color-surface-alt)] py-8 border-b border-[var(--color-separator)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: var(--font-size-h1); color: var(--color-primary); font-weight: 700;">
+          Our <span class="gradient-text">Campuses</span>
+        </h1>
+        <p class="text-[var(--color-text-muted)] mt-1">Experience excellence across two state-of-the-art facilities</p>
+      </div>
+      <nav aria-label="Breadcrumb" class="text-sm text-[var(--color-text-muted)]">
+        <a href="/" class="text-[var(--color-accent)] no-underline hover:underline">Home</a>
+        <span class="mx-1">›</span>
+        <span class="text-[var(--color-primary)] font-semibold">Campuses</span>
+      </nav>
+    </div>
+  </section>
+
+  {campuses.map((campus, idx) => (
+    <>
+      <!-- Campus Overview -->
+      <section id={campus.id} class={`section-spacing ${campus.color} relative overflow-hidden`}>
+        <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.03;" aria-hidden="true"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="mb-6" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+            <span class="text-[var(--color-primary)]">{campus.name}</span> <span class="text-[var(--color-accent)]">Campus</span>
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+            <!-- Image -->
+            <div class="overflow-hidden shadow-[var(--shadow-lg)]" style="border-radius: var(--radius-arch); aspect-ratio: 4/3;">
+              <img src={campus.images[0]} alt={`${campus.name} Campus`} class="w-full h-full object-cover hover:scale-105 transition-transform duration-[600ms]" loading="lazy" />
+            </div>
+
+            <!-- Info -->
+            <div>
+              <h3 class="text-[var(--color-primary)] font-semibold mb-3" style="font-family: var(--font-heading); font-size: var(--font-size-h3);">Campus Overview</h3>
+              <p class="text-[var(--color-text)] leading-[var(--leading-relaxed)] mb-6">{campus.overview}</p>
+              <div class="grid grid-cols-2 gap-4">
+                {campus.stats.map(({ icon, label, value }) => (
+                  <div class="bg-[var(--color-surface)] rounded-[var(--radius-md)] p-3 border border-[var(--color-separator)]">
+                    <div class="text-lg mb-1">{icon}</div>
+                    <div class="text-xs text-[var(--color-text-muted)]">{label}</div>
+                    <div class="text-sm font-semibold text-[var(--color-primary)]">{value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Campus Info Grid (dark) -->
+      <section class="py-10 relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));">
+        <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.08;" aria-hidden="true"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <!-- Contact -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-[var(--radius-lg)] p-5">
+            <div class="text-2xl mb-2">📍</div>
+            <h4 class="text-[var(--color-text-on-dark)] font-semibold mb-3">Contact Information</h4>
+            <div class="text-left space-y-2">
+              <p class="text-[var(--color-text-on-dark)]/80 text-xs">📍 {campus.contact.address}</p>
+              <p class="text-[var(--color-text-on-dark)]/80 text-xs">📞 {campus.contact.phone}</p>
+              <p class="text-[var(--color-text-on-dark)]/80 text-xs">📧 {campus.contact.email}</p>
+            </div>
+          </div>
+          <!-- Leadership -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-[var(--radius-lg)] p-5">
+            <div class="text-2xl mb-2">👥</div>
+            <h4 class="text-[var(--color-text-on-dark)] font-semibold mb-3">Campus Leadership</h4>
+            <div class="text-left space-y-2">
+              <div class="flex justify-between text-xs"><span class="text-[var(--color-text-on-dark)]/70">Principal:</span><span class="text-[var(--color-accent)] font-medium">{campus.leadership.principal}</span></div>
+              <div class="flex justify-between text-xs"><span class="text-[var(--color-text-on-dark)]/70">Vice Principal:</span><span class="text-[var(--color-accent)] font-medium">{campus.leadership.vp}</span></div>
+              <div class="flex justify-between text-xs"><span class="text-[var(--color-text-on-dark)]/70">Admin Officer:</span><span class="text-[var(--color-accent)] font-medium">{campus.leadership.admin}</span></div>
+            </div>
+          </div>
+          <!-- Timings -->
+          <div class="bg-white/10 backdrop-blur-sm rounded-[var(--radius-lg)] p-5">
+            <div class="text-2xl mb-2">🕐</div>
+            <h4 class="text-[var(--color-text-on-dark)] font-semibold mb-3">School Timings</h4>
+            <div class="text-left space-y-2">
+              <div class="flex justify-between text-xs"><span class="text-[var(--color-text-on-dark)]/70">Morning:</span><span class="text-[var(--color-accent)] font-medium">{campus.timings.morning}</span></div>
+              <div class="flex justify-between text-xs"><span class="text-[var(--color-text-on-dark)]/70">Afternoon:</span><span class="text-[var(--color-accent)] font-medium">{campus.timings.afternoon}</span></div>
+              <div class="flex justify-between text-xs"><span class="text-[var(--color-text-on-dark)]/70">Office:</span><span class="text-[var(--color-accent)] font-medium">{campus.timings.office}</span></div>
+              <div class="flex justify-between text-xs"><span class="text-[var(--color-text-on-dark)]/70">Working Days:</span><span class="text-[var(--color-accent)] font-medium">{campus.timings.days}</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {idx < campuses.length - 1 && (
+        <div class="h-px bg-gradient-to-r from-transparent via-[var(--color-accent)]/30 to-transparent" aria-hidden="true"></div>
+      )}
+    </>
+  ))}
+</BaseLayout>

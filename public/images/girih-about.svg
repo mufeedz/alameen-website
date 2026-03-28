@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <!--
+    Al-Ameen Girih Pattern — About section background
+    Emerald #064E3B strokes at 5% fill-opacity.
+    Tile at 160×160 so motif isn't too dense on mobile.
+  -->
+  <defs>
+    <pattern id="girih-about" x="0" y="0" width="160" height="160" patternUnits="userSpaceOnUse">
+      <!-- Outer decagon -->
+      <path
+        d="M80,8 L129.4,25.9 L152,76 L129.4,126.1 L80,144 L30.6,126.1 L8,76 L30.6,25.9 Z"
+        fill="none" stroke="#064E3B" stroke-width="1" stroke-opacity="0.07"
+      />
+      <!-- Star spikes -->
+      <path
+        d="M80,24 L104.8,56 L140,64 L116,96 L124,128 L88,120 L56,144 L48,108 L16,88 L52,72 Z"
+        fill="none" stroke="#064E3B" stroke-width="0.8" stroke-opacity="0.05"
+      />
+      <!-- Mid ring -->
+      <path
+        d="M80,40 L100,60 L120,72 L104,96 L112,120 L80,108 L52,120 L60,96 L44,72 L64,60 Z"
+        fill="none" stroke="#D4AF37" stroke-width="0.7" stroke-opacity="0.05"
+      />
+      <!-- Inner octagon -->
+      <path
+        d="M80,56 L92,68 L108,80 L92,92 L80,104 L68,92 L52,80 L68,68 Z"
+        fill="none" stroke="#064E3B" stroke-width="0.8" stroke-opacity="0.06"
+      />
+      <!-- Centre point -->
+      <circle cx="80" cy="80" r="6" fill="none" stroke="#064E3B" stroke-width="0.6" stroke-opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="160" height="160" fill="url(#girih-about)"/>
+</svg>

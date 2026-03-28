@@ -1,0 +1,381 @@
+---
+/**
+ * BaseLayout.astro
+ * Single shell for every page of the Al-Ameen School site.
+ * Provides: SEO <head>, Google Fonts, global CSS, Header, Footer, Back-to-top.
+ */
+import '../styles/global.css';
+
+interface Props {
+  /** Browser <title> – will be suffixed with "| Al-Ameen School" */
+  title?: string;
+  /** <meta name="description"> */
+  description?: string;
+  /** OG image path (relative to /public) */
+  ogImage?: string;
+  /** Active page key for nav highlighting */
+  activePage?: 'home' | 'about' | 'academics' | 'admissions' | 'campuses' | 'gallery' | 'events' | 'contact';
+}
+
+const {
+  title = 'Al-Ameen School, Erode',
+  description = 'Al-Ameen Matriculation Higher Secondary School — Empowering Knowledge, Inspiring Faith since 1983.',
+  ogImage = '/images/slider-1.webp',
+  activePage = 'home',
+} = Astro.props;
+
+const siteTitle = title === 'Al-Ameen School, Erode'
+  ? title
+  : `${title} | Al-Ameen School`;
+
+const navLinks = [
+  { href: '/',            label: 'Home',       key: 'home'       },
+  { href: '/about',       label: 'About',      key: 'about'      },
+  { href: '/academics',   label: 'Academics',  key: 'academics'  },
+  { href: '/admissions',  label: 'Admissions', key: 'admissions' },
+  { href: '/campuses',    label: 'Campuses',   key: 'campuses'   },
+  { href: '/gallery',     label: 'Gallery',    key: 'gallery'    },
+  { href: '/events',      label: 'Events',     key: 'events'     },
+  { href: '/contact',     label: 'Contact',    key: 'contact'    },
+];
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#064E3B" />
+
+    <!-- SEO -->
+    <title>{siteTitle}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph -->
+    <meta property="og:title"       content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image"       content={ogImage} />
+    <meta property="og:type"        content="website" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon"                      href="/favicon.ico" />
+
+    <!--
+      Google Fonts — MANIFEST §1.2
+      • Inter + Reem Kufi: display=swap  (body & headings — CLS safe)
+      • Amiri:             display=optional (hero display only — won't block FCP)
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Reem+Kufi:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=optional"
+    />
+
+    <!-- Global styles injected by Astro via frontmatter import above -->
+
+    <!-- Slot for page-level <head> additions (meta, preloads, etc.) -->
+    <slot name="head" />
+  </head>
+
+  <body class="bg-[var(--color-base)] text-[var(--color-text)] font-[var(--font-body)] antialiased">
+
+    <!-- ════════════════════════════════════════════
+         SKIP LINK — keyboard / screen-reader first
+         ════════════════════════════════════════════ -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999]
+             focus:px-4 focus:py-2 focus:rounded-[var(--radius-md)]
+             focus:bg-[var(--color-accent)] focus:text-[var(--color-primary)]
+             focus:font-semibold focus:shadow-lg"
+    >
+      Skip to main content
+    </a>
+
+    <!-- Live-region for screen-reader announcements -->
+    <div id="sr-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ════════════════════════════════════════════
+         HEADER / NAV
+         ════════════════════════════════════════════ -->
+    <header
+      id="site-header"
+      class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm
+             border-b border-[var(--color-separator)]
+             shadow-[var(--shadow-sm)]
+             transition-shadow duration-[var(--duration-normal)]"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav
+          class="flex items-center justify-between h-16 md:h-20"
+          aria-label="Main navigation"
+        >
+          <!-- Brand -->
+          <a
+            href="/"
+            class="flex items-center gap-3 flex-shrink-0 no-underline group"
+            aria-label="Al-Ameen School — Home"
+          >
+            <div
+              class="w-10 h-10 rounded-full bg-[var(--color-primary)] flex items-center justify-center
+                     text-[var(--color-accent)] font-bold text-lg
+                     ring-2 ring-[var(--color-accent)]/30 group-hover:ring-[var(--color-accent)]/70
+                     transition-all duration-[var(--duration-normal)]"
+              aria-hidden="true"
+            >
+              ع
+            </div>
+            <div class="flex flex-col leading-tight">
+              <span class="font-[var(--font-heading)] font-semibold text-[var(--color-primary)] text-base md:text-lg">
+                Al-Ameen School
+              </span>
+              <span class="text-[var(--font-size-small)] text-[var(--color-text-muted)] hidden sm:block">
+                Erode, Tamil Nadu
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop nav -->
+          <ul class="hidden lg:flex items-center gap-1 list-none m-0 p-0">
+            {navLinks.map(({ href, label, key }) => (
+              <li>
+                <a
+                  href={href}
+                  class:list={[
+                    'px-3 py-2 rounded-[var(--radius-sm)] text-sm font-medium no-underline transition-all duration-[var(--duration-fast)]',
+                    key === activePage
+                      ? 'bg-[var(--color-primary)] text-[var(--color-text-on-dark)]'
+                      : 'text-[var(--color-text)] hover:bg-[var(--color-surface-alt)] hover:text-[var(--color-primary)]'
+                  ]}
+                  aria-current={key === activePage ? 'page' : undefined}
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+            <li class="ml-3">
+              <a
+                href="/admissions"
+                class="px-4 py-2 rounded-[var(--radius-md)] text-sm font-semibold no-underline
+                       bg-[var(--color-accent)] text-[var(--color-primary)]
+                       hover:bg-[var(--color-accent-dark)] hover:text-[var(--color-primary)]
+                       shadow-[var(--shadow-sm)] transition-all duration-[var(--duration-fast)]"
+              >
+                Apply Now
+              </a>
+            </li>
+          </ul>
+
+          <!-- Mobile hamburger -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Toggle navigation menu"
+            class="lg:hidden p-2 rounded-[var(--radius-sm)] text-[var(--color-primary)]
+                   hover:bg-[var(--color-surface-alt)] transition-colors duration-[var(--duration-fast)]"
+          >
+            <svg id="icon-menu" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Mobile menu panel -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden border-t border-[var(--color-separator)] bg-white"
+        role="navigation"
+        aria-label="Mobile navigation"
+      >
+        <ul class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1 list-none m-0 p-0">
+          {navLinks.map(({ href, label, key }) => (
+            <li>
+              <a
+                href={href}
+                class:list={[
+                  'block px-3 py-2.5 rounded-[var(--radius-sm)] text-sm font-medium no-underline',
+                  key === activePage
+                    ? 'bg-[var(--color-primary)] text-[var(--color-text-on-dark)]'
+                    : 'text-[var(--color-text)] hover:bg-[var(--color-surface-alt)]'
+                ]}
+                aria-current={key === activePage ? 'page' : undefined}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+          <li class="pt-2 pb-1">
+            <a
+              href="/admissions"
+              class="block text-center px-4 py-2.5 rounded-[var(--radius-md)] text-sm font-semibold no-underline
+                     bg-[var(--color-accent)] text-[var(--color-primary)]"
+            >
+              Apply Now
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ════════════════════════════════════════════
+         PAGE CONTENT
+         ════════════════════════════════════════════ -->
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <!-- ════════════════════════════════════════════
+         FOOTER
+         ════════════════════════════════════════════ -->
+    <footer class="bg-[var(--color-primary)] text-[var(--color-text-on-dark)] relative overflow-hidden">
+      <!-- Girih watermark behind footer content -->
+      <div
+        class="absolute inset-0 pointer-events-none"
+        style="background-image: url('/images/girih-about.svg'); background-size: 200px 200px; background-repeat: repeat; opacity: 0.04;"
+        aria-hidden="true"
+      ></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
+
+        <!-- Col 1: Brand + Address -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-[var(--color-accent)]/20 flex items-center justify-center text-[var(--color-accent)] font-bold text-xl">ع</div>
+            <span class="font-[var(--font-heading)] font-semibold text-lg">Al-Ameen School</span>
+          </div>
+          <address class="not-italic text-sm text-[var(--color-text-on-dark)]/80 space-y-2 leading-relaxed">
+            <p>📍 No 180/6, Cauvery Road, Karungalpalayam–638003</p>
+            <p>📞 <a href="tel:+918015053189" class="text-[var(--color-accent-light)] hover:text-[var(--color-accent)] no-underline">+91-8015053189</a></p>
+            <p>✉️ <a href="mailto:info@alameen.edu" class="text-[var(--color-accent-light)] hover:text-[var(--color-accent)] no-underline">info@alameen.edu</a></p>
+          </address>
+        </div>
+
+        <!-- Col 2: Social + Bismillah -->
+        <div>
+          <h3 class="font-[var(--font-heading)] font-semibold text-base mb-4">Stay Connected</h3>
+          <div class="flex gap-4 mb-5" role="navigation" aria-label="Social media">
+            {[
+              { label: 'Facebook',  href: '#', icon: 'f' },
+              { label: 'Instagram', href: '#', icon: '📷' },
+              { label: 'WhatsApp',  href: '#', icon: '💬' },
+              { label: 'YouTube',   href: '#', icon: '▶' },
+            ].map(({ label, href, icon }) => (
+              <a
+                href={href}
+                aria-label={`Follow us on ${label}`}
+                class="w-9 h-9 rounded-full bg-white/10 hover:bg-[var(--color-accent)]/20
+                       flex items-center justify-center text-sm
+                       text-[var(--color-text-on-dark)] hover:text-[var(--color-accent)]
+                       no-underline transition-colors duration-[var(--duration-fast)]"
+              >
+                {icon}
+              </a>
+            ))}
+          </div>
+          <p class="text-2xl" style="font-family: 'Amiri', serif; color: var(--color-accent-light); opacity: 0.8;" lang="ar" dir="rtl">
+            بسم الله الرحمن الرحيم
+          </p>
+        </div>
+
+        <!-- Col 3: Quick links -->
+        <div>
+          <h3 class="font-[var(--font-heading)] font-semibold text-base mb-4">Quick Links</h3>
+          <div class="grid grid-cols-2 gap-x-4 gap-y-1">
+            {navLinks.map(({ href, label }) => (
+              <a
+                href={href}
+                class="text-sm text-[var(--color-text-on-dark)]/75 hover:text-[var(--color-accent-light)]
+                       no-underline transition-colors duration-[var(--duration-fast)] py-0.5"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer bottom bar -->
+      <div class="relative border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-[var(--color-text-on-dark)]/60">
+          <p>© 2025 Al-Ameen School. All rights reserved.</p>
+          <p class="flex items-center gap-1.5">
+            <span>Designed with care</span>
+            <span class="text-[var(--color-accent)]">·</span>
+            <span>Accessibility</span>
+            <span class="text-[var(--color-accent)]">·</span>
+            <span>Excellence</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ════════════════════════════════════════════
+         BACK TO TOP
+         ════════════════════════════════════════════ -->
+    <a
+      id="back-to-top"
+      href="#"
+      aria-label="Back to top"
+      class="fixed bottom-6 right-5 z-50 w-11 h-11 rounded-full
+             bg-[var(--color-accent)] text-[var(--color-primary)] font-bold
+             flex items-center justify-center shadow-[var(--shadow-md)]
+             opacity-0 translate-y-4 pointer-events-none
+             transition-all duration-[var(--duration-normal)]
+             hover:bg-[var(--color-accent-dark)] hover:scale-110"
+    >
+      ↑
+    </a>
+
+    <!-- ════════════════════════════════════════════
+         GLOBAL SCRIPTS
+         ════════════════════════════════════════════ -->
+    <script>
+      // Mobile menu toggle
+      const btn   = document.getElementById('mobile-menu-btn')!;
+      const menu  = document.getElementById('mobile-menu')!;
+      const iMenu = document.getElementById('icon-menu')!;
+      const iClose= document.getElementById('icon-close')!;
+
+      btn.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('hidden');
+        iMenu.classList.toggle('hidden');
+        iClose.classList.toggle('hidden');
+      });
+
+      // Back to top — show after 400px scroll
+      const btt = document.getElementById('back-to-top')!;
+      const toggleBtt = () => {
+        const show = window.scrollY > 400;
+        btt.classList.toggle('opacity-0', !show);
+        btt.classList.toggle('opacity-100', show);
+        btt.classList.toggle('translate-y-4', !show);
+        btt.classList.toggle('translate-y-0', show);
+        btt.classList.toggle('pointer-events-none', !show);
+        btt.classList.toggle('pointer-events-auto', show);
+      };
+      window.addEventListener('scroll', toggleBtt, { passive: true });
+
+      // Sticky header shadow amplification on scroll
+      const header = document.getElementById('site-header')!;
+      window.addEventListener('scroll', () => {
+        header.classList.toggle('shadow-[var(--shadow-md)]', window.scrollY > 10);
+        header.classList.toggle('shadow-[var(--shadow-sm)]', window.scrollY <= 10);
+      }, { passive: true });
+    </script>
+  </body>
+</html>

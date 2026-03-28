@@ -1,0 +1,247 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const phones = [
+  { label: 'Main Office', value: '+91-8015053189' },
+  { label: 'Admissions', value: '+91-8015053189' },
+  { label: 'Accounts', value: '+91-9380975746' },
+  { label: 'Emergency', value: '+91-9380975746', accent: true },
+];
+
+const emails = [
+  { label: 'General Inquiries', value: 'info@alameen.edu' },
+  { label: 'Admissions', value: 'admissions@alameen.edu' },
+  { label: 'Accounts', value: 'accounts@alameen.edu' },
+  { label: "Principal's Office", value: 'principal@alameen.edu', accent: true },
+];
+
+const socials = [
+  { icon: '📘', name: 'Facebook', url: '#' },
+  { icon: '💬', name: 'WhatsApp', url: '#' },
+  { icon: '📷', name: 'Instagram', url: '#' },
+  { icon: '▶️', name: 'YouTube', url: '#' },
+];
+
+const campusLocations = [
+  {
+    icon: '🏫',
+    name: 'Karungalpalayam Campus',
+    sub: 'Main Campus • Established 1983',
+    address: 'No 180/6, Cauvery Road, Karungalpalayam-638003 (Opposite Government School)',
+    phone: '+91-8015053189',
+    email: 'main@alameen.edu',
+    mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6175106863103!2d-73.98823492378136!3d40.748440737501204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b30eac9f%3A0x39cd00e1da8f123!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1701290267340!5m2!1sen!2sus',
+  },
+  {
+    icon: '🏠',
+    name: 'Ellapalayam Campus',
+    sub: 'Branch Campus • Progressive Co-ed',
+    address: '9M58+WVG, Gangapuram, Tamil Nadu 638004 (Progressive Co-ed Campus)',
+    phone: '+91-8015053189',
+    email: 'branch@alameen.edu',
+    mapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.3825742971866!2d-74.01395048440647!3d40.75372104271983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259afc2c1711b%3A0xa1dc5f1d19c8c8c8!2sHudson%20Yards!5e0!3m2!1sen!2sus!4v1701290390215!5m2!1sen!2sus',
+  },
+];
+---
+
+<BaseLayout
+  title="Contact Us"
+  description="Get in touch with Al-Ameen School. Find our contact details, campus locations, and operating hours."
+  activePage="contact"
+>
+  <!-- Page Header -->
+  <section class="bg-[var(--color-surface-alt)] py-8 border-b border-[var(--color-separator)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: var(--font-size-h1); color: var(--color-primary); font-weight: 700;">
+          Contact <span class="gradient-text">Us</span>
+        </h1>
+        <p class="text-[var(--color-text-muted)] mt-1">Connect with Al-Ameen School — We're here to assist you with any inquiries</p>
+      </div>
+      <nav aria-label="Breadcrumb" class="text-sm text-[var(--color-text-muted)]">
+        <a href="/" class="text-[var(--color-accent)] no-underline hover:underline">Home</a>
+        <span class="mx-1">›</span>
+        <span class="text-[var(--color-primary)] font-semibold">Contact</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Get In Touch -->
+  <section class="section-spacing relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.03;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        Get In <span class="gradient-text">Touch</span>
+      </h2>
+      <p class="text-center text-[var(--color-text-muted)] mb-10">Connect with Al-Ameen School through multiple channels — we're here to assist you</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Phone -->
+        <div class="bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-6 border border-[var(--color-separator)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)] transition-shadow duration-[var(--duration-normal)] text-center">
+          <div class="text-4xl mb-3">📞</div>
+          <h3 class="text-[var(--color-primary)] font-semibold mb-4" style="font-family: var(--font-heading); font-size: var(--font-size-h4);">Phone Numbers</h3>
+          <div class="space-y-3 text-left">
+            {phones.map(({ label, value, accent }) => (
+              <div class="flex justify-between items-center">
+                <span class="text-xs text-[var(--color-text-muted)]">{label}:</span>
+                <strong class={`text-sm ${accent ? 'text-[var(--color-accent)]' : 'text-[var(--color-primary)]'}`}>{value}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-6 border border-[var(--color-separator)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)] transition-shadow duration-[var(--duration-normal)] text-center">
+          <div class="text-4xl mb-3">📧</div>
+          <h3 class="text-[var(--color-primary)] font-semibold mb-4" style="font-family: var(--font-heading); font-size: var(--font-size-h4);">Email Addresses</h3>
+          <div class="space-y-3 text-left">
+            {emails.map(({ label, value, accent }) => (
+              <div>
+                <span class="text-xs text-[var(--color-text-muted)] block">{label}:</span>
+                <strong class={`text-sm ${accent ? 'text-[var(--color-accent)]' : 'text-[var(--color-primary)]'}`}>{value}</strong>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-6 border border-[var(--color-separator)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)] transition-shadow duration-[var(--duration-normal)] text-center">
+          <div class="text-4xl mb-3">🕐</div>
+          <h3 class="text-[var(--color-primary)] font-semibold mb-4" style="font-family: var(--font-heading); font-size: var(--font-size-h4);">Operating Hours</h3>
+          <div class="space-y-3 text-left">
+            <div>
+              <span class="text-xs text-[var(--color-text-muted)] font-medium block">Administrative Office:</span>
+              <div class="flex justify-between mt-1"><span class="text-xs text-[var(--color-text-muted)]">Mon - Fri:</span><strong class="text-sm text-[var(--color-primary)]">8:45 AM - 4:30 PM</strong></div>
+              <div class="flex justify-between"><span class="text-xs text-[var(--color-text-muted)]">Saturday:</span><strong class="text-sm text-[var(--color-primary)]">8:45 AM - 4:30 PM</strong></div>
+            </div>
+            <div>
+              <span class="text-xs text-[var(--color-text-muted)] font-medium block">School Hours:</span>
+              <div class="flex justify-between mt-1"><span class="text-xs text-[var(--color-text-muted)]">Mon - Sat:</span><strong class="text-sm text-[var(--color-accent)]">8:35 AM - 3:40 PM</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Islamic Calligraphy Quote -->
+  <section class="py-10 text-center relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.08;" aria-hidden="true"></div>
+    <div class="relative max-w-2xl mx-auto px-4">
+      <p class="text-3xl text-[var(--color-accent-light)]" style="font-family: 'Amiri', serif;" lang="ar" dir="rtl">
+        وَقُل رَّبِّ اهْدِنِي
+      </p>
+      <p class="text-[var(--color-text-on-dark)]/80 mt-2 italic">"And say: My Lord, guide me" — Quran 17:80</p>
+    </div>
+  </section>
+
+  <!-- Campus Locations -->
+  <section class="section-spacing bg-[var(--color-surface-alt)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        Our <span class="gradient-text">Campus Locations</span>
+      </h2>
+      <p class="text-center text-[var(--color-text-muted)] mb-10">Visit us at either of our state-of-the-art educational facilities</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {campusLocations.map(campus => (
+          <div class="bg-[var(--color-surface)] rounded-[var(--radius-lg)] overflow-hidden border border-[var(--color-separator)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)] transition-shadow duration-[var(--duration-normal)]">
+            <div class="p-6">
+              <div class="text-center mb-4">
+                <div class="text-4xl mb-2">{campus.icon}</div>
+                <h3 class="text-[var(--color-primary)] font-semibold" style="font-family: var(--font-heading); font-size: var(--font-size-h4);">{campus.name}</h3>
+                <p class="text-xs text-[var(--color-text-muted)]">{campus.sub}</p>
+              </div>
+              <div class="space-y-3 mb-4">
+                <div class="flex items-start gap-2">
+                  <span class="flex-shrink-0 mt-0.5">📍</span>
+                  <div>
+                    <strong class="text-[var(--color-primary)] text-sm block">Address</strong>
+                    <p class="text-xs text-[var(--color-text-muted)]">{campus.address}</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="flex-shrink-0">📞</span>
+                  <div>
+                    <strong class="text-[var(--color-primary)] text-sm block">Phone</strong>
+                    <p class="text-xs text-[var(--color-text-muted)]">{campus.phone}</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="flex-shrink-0">📧</span>
+                  <div>
+                    <strong class="text-[var(--color-primary)] text-sm block">Email</strong>
+                    <p class="text-xs text-[var(--color-text-muted)]">{campus.email}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="h-56 border-t border-[var(--color-separator)]">
+              <iframe src={campus.mapSrc} width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title={`Map showing ${campus.name} location`}></iframe>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media -->
+  <section class="section-spacing bg-[var(--color-surface)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        Connect With <span class="gradient-text">Us</span>
+      </h2>
+      <p class="text-center text-[var(--color-text-muted)] mb-8">Follow us on social media for updates, announcements, and community highlights</p>
+
+      <div class="flex flex-wrap justify-center gap-4 max-w-xl mx-auto">
+        {socials.map(({ icon, name, url }) => (
+          <a href={url} class="flex-1 min-w-[100px] max-w-[140px] bg-[var(--color-surface)] rounded-[var(--radius-md)] p-4 text-center border border-[var(--color-separator)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)] hover:-translate-y-1 transition-all duration-[var(--duration-normal)] no-underline" aria-label={`Visit our ${name} page`}>
+            <div class="text-3xl mb-1">{icon}</div>
+            <p class="text-[var(--color-primary)] font-medium text-sm">{name}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Mailing Address -->
+  <section class="section-spacing bg-[var(--color-surface-alt)]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-8 border border-[var(--color-separator)] shadow-[var(--shadow-sm)] text-center">
+        <h2 class="mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+          Mailing <span class="gradient-text">Address</span>
+        </h2>
+        <p class="text-[var(--color-text-muted)] text-sm mb-6">For official correspondence and postal communication</p>
+        <div class="bg-[var(--color-surface-alt)] rounded-[var(--radius-md)] p-6 mb-4 inline-block">
+          <div class="text-4xl mb-3">✉️</div>
+          <h3 class="text-[var(--color-primary)] font-semibold mb-2">Al-Ameen School</h3>
+          <p class="text-sm text-[var(--color-text-muted)] mb-1"><strong>Administrative Office</strong></p>
+          <p class="text-sm text-[var(--color-text-muted)] mb-0.5">No 180/6, Cauvery Road, Karungalpalayam</p>
+          <p class="text-sm text-[var(--color-text-muted)]">Tamil Nadu, 638003</p>
+        </div>
+        <div class="bg-[var(--color-accent)]/10 rounded-[var(--radius-sm)] p-3 text-sm text-[var(--color-text-muted)]">
+          <span class="text-[var(--color-accent)] mr-1">ℹ️</span> For quicker responses, we recommend using email for all correspondence.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-16 text-center relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.06;" aria-hidden="true"></div>
+    <div class="relative max-w-3xl mx-auto px-4">
+      <h2 class="text-[var(--color-text-on-dark)] mb-3" style="font-family: var(--font-display); font-size: var(--font-size-h2); font-weight: 600;">
+        Ready to Join Our Community?
+      </h2>
+      <p class="text-[var(--color-text-on-dark)]/80 text-lg mb-6">Have questions about admissions, academics, or campus life? Our dedicated team is here to guide you.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:admissions@alameen.edu" class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full font-bold text-[var(--color-primary)] bg-[var(--color-accent)] hover:bg-[var(--color-accent-light)] transition-colors duration-[var(--duration-normal)] shadow-[var(--shadow-md)]">
+          ✉️ Contact Admissions Office
+        </a>
+        <a href="tel:+918015053189" class="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full font-bold text-[var(--color-text-on-dark)] border-2 border-[var(--color-text-on-dark)]/40 hover:bg-white/10 transition-colors duration-[var(--duration-normal)]">
+          📞 Call: +91-8015053189
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

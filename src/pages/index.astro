@@ -1,0 +1,725 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+/**
+ * Home page — migrated from legacy-site/index.html
+ * Bootstrap → Tailwind CSS with Emerald/Gold tokens
+ * Sections: Hero, About (Girih), Why Choose, CTA, Events, Campuses, Final CTA
+ */
+
+const features = [
+  {
+    icon: '🏆',
+    title: 'Excellence in Education',
+    body:  'Consistently achieving top academic results with innovative teaching methodologies.',
+  },
+  {
+    icon: '👩‍🏫',
+    title: 'Experienced Faculty',
+    body:  'Dedicated teachers with years of experience in nurturing young minds.',
+  },
+  {
+    icon: '🏛️',
+    title: 'Modern Facilities',
+    body:  'State-of-the-art infrastructure and learning resources for comprehensive education.',
+  },
+  {
+    icon: '🌱',
+    title: 'Holistic Development',
+    body:  'Focus on character building, moral values, and overall personality development.',
+  },
+];
+
+const campuses = [
+  {
+    id:       'main-campus',
+    name:     'Karungalpalayam Campus',
+    location: 'Cauvery Road',
+    type:     'Co-ed (up to 5th) · Girls Only (6th–12th)',
+    facts: [
+      'Established 1983 — 42 years of excellence',
+      '0.54-acre campus with modern facilities',
+      'Co-educational up to Grade 5, all-girls from Grade 6',
+    ],
+  },
+  {
+    id:       'annex-campus',
+    name:     'Ellapalayam Campus',
+    location: 'Villarasampatti',
+    type:     'Co-ed (All Grades 1–12)',
+    facts: [
+      'Established 1992 — 33 years of excellence',
+      '1.5-acre campus with latest technology',
+      'Co-educational, all grades',
+    ],
+  },
+];
+
+const heroSlides = [
+  {
+    img:    '/images/slider-1.webp',
+    alt:    'Al-Ameen School campus view with students in front of the main building',
+    title:  'Al Ameen School, Erode',
+    sub:    'Empowering Knowledge, Inspiring Faith',
+    cta:    { href: '/admissions', label: 'Admissions' },
+    eager:  true,
+  },
+  {
+    img:    '/images/slider-2.webp',
+    alt:    'Students engaged in classroom activities at Al-Ameen School',
+    title:  'A Tradition of Excellence',
+    sub:    'Discover our vibrant learning community',
+    cta:    { href: '/academics', label: 'Our Programs' },
+    eager:  false,
+  },
+  {
+    img:    '/images/slider-3.webp',
+    alt:    'School facilities and campus view at Al-Ameen',
+    title:  'Rooted in Values',
+    sub:    'Academic achievement with strong character',
+    cta:    { href: '/about', label: 'About Us' },
+    eager:  false,
+  },
+];
+---
+
+<BaseLayout
+  title="Al-Ameen School, Erode"
+  description="Al-Ameen Matriculation Higher Secondary School — Empowering Knowledge, Inspiring Faith since 1983."
+  activePage="home"
+>
+
+  <!-- ══════════════════════════════════════════════════
+       §1 HERO — arch-masked images + emerald overlay
+       MANIFEST §1.5: Approach A (border-radius arch) on
+       the primary image; full-bleed on slider.
+       ══════════════════════════════════════════════════ -->
+  <section
+    id="hero"
+    class="relative overflow-hidden bg-[var(--color-primary)]"
+    aria-label="School highlights carousel"
+  >
+    <!-- Slide track -->
+    <div
+      id="hero-track"
+      class="flex transition-transform duration-[600ms] ease-[var(--ease-standard)] will-change-transform"
+      style="width: 300%;"
+    >
+      {heroSlides.map((slide, i) => (
+        <div
+          class="relative flex-shrink-0 w-1/3"
+          style="aspect-ratio: 16/7; min-height: 420px;"
+          aria-hidden={i !== 0}
+        >
+          <!-- Background image -->
+          <img
+            src={slide.img}
+            alt={slide.alt}
+            loading={slide.eager ? 'eager' : 'lazy'}
+            decoding="async"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+          />
+
+          <!-- Multi-layer overlay: dark gradient + subtle Girih texture -->
+          <div
+            class="absolute inset-0"
+            style="background: linear-gradient(160deg, rgba(6,78,59,0.82) 0%, rgba(6,78,59,0.55) 50%, rgba(4,61,46,0.75) 100%);"
+            aria-hidden="true"
+          ></div>
+          <div
+            class="absolute inset-0 mix-blend-soft-light"
+            style="background-image: url('/images/girih-about.svg'); background-size: 180px 180px; opacity: 0.18;"
+            aria-hidden="true"
+          ></div>
+
+          <!-- Content: arch-framed image + text side by side on md+ -->
+          <div class="relative z-10 h-full flex items-center justify-center px-4 sm:px-8 lg:px-16">
+            <div class="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-16 py-12 md:py-0">
+
+              <!-- Left: arch-masked campus image (§1.5 Approach A) -->
+              <div class="hidden md:block flex-shrink-0">
+                <div
+                  class="w-56 lg:w-72 overflow-hidden shadow-[var(--shadow-lg)]
+                         ring-4 ring-[var(--color-accent)]/40"
+                  style="border-radius: 50% 50% 0 0 / 60% 60% 0 0; aspect-ratio: 3/4;"
+                  aria-hidden="true"
+                >
+                  <img
+                    src={slide.img}
+                    alt=""
+                    class="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <!-- Right: text content -->
+              <div class="text-center md:text-left max-w-xl">
+                <!-- Gold decorative bar -->
+                <div
+                  class="mb-4 mx-auto md:mx-0 w-12 h-1 rounded-full"
+                  style="background: var(--color-accent);"
+                  aria-hidden="true"
+                ></div>
+
+                <h1
+                  class="text-[var(--color-text-on-dark)] leading-tight mb-4 drop-shadow-sm"
+                  style="font-family: var(--font-display); font-size: var(--font-size-h1); font-weight: 700;"
+                >
+                  {slide.title}
+                </h1>
+
+                <p
+                  class="text-[var(--color-text-on-dark)]/85 mb-8 leading-relaxed"
+                  style="font-size: clamp(1rem, 2vw, 1.2rem);"
+                >
+                  {slide.sub}
+                </p>
+
+                <a
+                  href={slide.cta.href}
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)]
+                         font-semibold text-sm no-underline
+                         bg-[var(--color-accent)] text-[var(--color-primary)]
+                         hover:bg-[var(--color-accent-dark)]
+                         shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]
+                         transition-all duration-[var(--duration-normal)]
+                         hover:-translate-y-0.5 active:translate-y-0"
+                >
+                  {slide.cta.label}
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Slide controls -->
+    <div
+      class="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4"
+      role="group"
+      aria-label="Carousel controls"
+    >
+      <!-- Prev -->
+      <button
+        id="hero-prev"
+        aria-label="Previous slide"
+        class="w-9 h-9 rounded-full bg-white/20 hover:bg-[var(--color-accent)]/80
+               text-white flex items-center justify-center text-lg
+               transition-all duration-[var(--duration-fast)] backdrop-blur-sm"
+      >‹</button>
+
+      <!-- Dot indicators -->
+      <div class="flex gap-2" role="tablist" aria-label="Slides">
+        {heroSlides.map((_, i) => (
+          <button
+            role="tab"
+            id={`hero-dot-${i}`}
+            aria-label={`Go to slide ${i + 1}`}
+            aria-selected={i === 0}
+            class:list={[
+              'rounded-full transition-all duration-[var(--duration-normal)]',
+              i === 0
+                ? 'w-6 h-2.5 bg-[var(--color-accent)]'
+                : 'w-2.5 h-2.5 bg-white/50 hover:bg-white/80'
+            ]}
+          />
+        ))}
+      </div>
+
+      <!-- Next -->
+      <button
+        id="hero-next"
+        aria-label="Next slide"
+        class="w-9 h-9 rounded-full bg-white/20 hover:bg-[var(--color-accent)]/80
+               text-white flex items-center justify-center text-lg
+               transition-all duration-[var(--duration-fast)] backdrop-blur-sm"
+      >›</button>
+    </div>
+  </section>
+
+  <!-- Gold divider line -->
+  <div class="h-1 w-full" style="background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-primary));" aria-hidden="true"></div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       §2 ABOUT PREVIEW — Girih pattern @ 5% opacity
+       MANIFEST §1.5: "5% opacity Girih pattern to the
+       background of the 'About' section"
+       ══════════════════════════════════════════════════ -->
+  <section
+    id="about-section"
+    class="relative overflow-hidden section-spacing"
+    aria-labelledby="about-heading"
+  >
+    <!-- ✦ Girih background — 5% opacity (MANIFEST §1.5 signature touch) -->
+    <div
+      class="absolute inset-0 pointer-events-none"
+      style="
+        background-color: var(--color-surface-alt);
+        background-image: url('/images/girih-about.svg');
+        background-size: 160px 160px;
+        background-repeat: repeat;
+        opacity: 0.05;
+      "
+      aria-hidden="true"
+    ></div>
+    <!-- Section base colour underneath -->
+    <div class="absolute inset-0 -z-10 bg-[var(--color-surface-alt)]" aria-hidden="true"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+        <!-- Text -->
+        <div>
+          <p class="text-xs font-semibold tracking-[var(--tracking-widest)] uppercase text-[var(--color-accent)] mb-3">
+            Est. 1983 · Erode, Tamil Nadu
+          </p>
+          <h2
+            id="about-heading"
+            class="mb-5"
+            style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;"
+          >
+            About <span class="gradient-text">Al-Ameen</span>
+          </h2>
+          <p class="text-[var(--color-text)] leading-[var(--leading-relaxed)] mb-4">
+            Al-Ameen Matriculation Higher Secondary School is dedicated to nurturing young minds with a blend
+            of academic excellence, Islamic values, and holistic development. Our vibrant campus, experienced
+            faculty, and inclusive environment empower every student to thrive.
+          </p>
+          <p class="text-[var(--color-text-muted)] leading-[var(--leading-relaxed)] mb-8">
+            Founded on principles of educational excellence and character development, we provide a supportive
+            environment where students can grow intellectually, spiritually, and socially.
+          </p>
+          <a
+            href="/about"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-[var(--radius-md)]
+                   font-semibold text-sm no-underline
+                   bg-[var(--color-primary)] text-[var(--color-text-on-dark)]
+                   hover:bg-[var(--color-primary-dark)]
+                   shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-md)]
+                   transition-all duration-[var(--duration-normal)] hover:-translate-y-0.5"
+          >
+            Learn More <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <!-- Arch-masked image (§1.5 Approach A) -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="relative">
+            <!-- Decorative gold ring behind the arch -->
+            <div
+              class="absolute -top-4 -right-4 w-full h-full rounded-[50%_50%_0_0/60%_60%_0_0]
+                     border-4 border-[var(--color-accent)]/25"
+              aria-hidden="true"
+            ></div>
+            <!-- Arch image container -->
+            <div
+              class="relative overflow-hidden shadow-[var(--shadow-lg)] w-72 sm:w-80 lg:w-96"
+              style="border-radius: 50% 50% 0 0 / 60% 60% 0 0; aspect-ratio: 3/4;"
+            >
+              <img
+                src="/images/slider-1.webp"
+                alt="Al-Ameen School campus — students and main building"
+                class="w-full h-full object-cover object-center
+                       transition-transform duration-[600ms] ease-[var(--ease-standard)]
+                       hover:scale-105"
+                loading="lazy"
+                decoding="async"
+              />
+              <!-- Subtle emerald bottom tint for depth -->
+              <div
+                class="absolute bottom-0 left-0 right-0 h-1/3"
+                style="background: linear-gradient(to top, rgba(6,78,59,0.3), transparent);"
+                aria-hidden="true"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       §3 WHY CHOOSE AL-AMEEN — feature cards
+       ══════════════════════════════════════════════════ -->
+  <section
+    class="section-spacing bg-[var(--color-surface)]"
+    aria-labelledby="why-heading"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2
+          id="why-heading"
+          class="mb-4"
+          style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;"
+        >
+          Why Choose <span class="text-[var(--color-accent)]">Al-Ameen</span>?
+        </h2>
+        <p class="text-[var(--color-text-muted)] leading-[var(--leading-relaxed)]">
+          Discover what makes our institution a premier choice for your child's education and future success.
+        </p>
+      </div>
+
+      <!-- 4-column card grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {features.map(({ icon, title, body }) => (
+          <div
+            class="group bg-[var(--color-base)] rounded-[var(--radius-lg)] p-6 text-center
+                   border border-[var(--color-separator)]
+                   shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)]
+                   transition-all duration-[var(--duration-normal)] hover:-translate-y-1"
+          >
+            <!-- Icon bubble -->
+            <div
+              class="mx-auto mb-4 w-16 h-16 rounded-full flex items-center justify-center text-2xl
+                     bg-[var(--color-primary)]/8
+                     group-hover:bg-[var(--color-accent)]/15
+                     transition-colors duration-[var(--duration-normal)]"
+            >
+              {icon}
+            </div>
+            <!-- Gold underline accent -->
+            <div class="mx-auto mb-3 w-8 h-0.5 rounded bg-[var(--color-accent)] transition-all duration-[var(--duration-normal)] group-hover:w-12" aria-hidden="true"></div>
+            <h3
+              class="mb-2 font-semibold text-[var(--color-primary)]"
+              style="font-family: var(--font-heading); font-size: var(--font-size-h4);"
+            >
+              {title}
+            </h3>
+            <p class="text-sm text-[var(--color-text-muted)] leading-[var(--leading-relaxed)]">
+              {body}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       §4 ADMISSIONS CTA BANNER
+       ══════════════════════════════════════════════════ -->
+  <section
+    class="relative overflow-hidden py-16"
+    style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);"
+    aria-labelledby="cta-heading"
+  >
+    <!-- Girih pattern overlay -->
+    <div
+      class="absolute inset-0 pointer-events-none"
+      style="background-image: url('/images/girih-about.svg'); background-size: 160px 160px; opacity: 0.08;"
+      aria-hidden="true"
+    ></div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-[var(--color-accent-light)] text-sm font-semibold tracking-[var(--tracking-wide)] uppercase mb-3">
+        2025–2026 Academic Year
+      </p>
+      <h2
+        id="cta-heading"
+        class="text-[var(--color-text-on-dark)] mb-4"
+        style="font-family: var(--font-heading); font-size: var(--font-size-h2); font-weight: 600;"
+      >
+        Admissions Now Open
+      </h2>
+      <p class="text-[var(--color-text-on-dark)]/80 mb-8 max-w-xl mx-auto leading-[var(--leading-relaxed)]">
+        Limited seats available for all grades. Apply today to secure your child's future at Al-Ameen.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/admissions"
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-[var(--radius-md)]
+                 font-semibold text-sm no-underline
+                 bg-[var(--color-accent)] text-[var(--color-primary)]
+                 hover:bg-[var(--color-accent-dark)]
+                 shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]
+                 transition-all duration-[var(--duration-normal)] hover:-translate-y-0.5"
+        >
+          Apply Now →
+        </a>
+        <a
+          href="/assets/forms/admission-form.pdf"
+          download
+          class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-[var(--radius-md)]
+                 font-semibold text-sm no-underline
+                 bg-transparent text-[var(--color-text-on-dark)]
+                 border-2 border-white/30 hover:border-[var(--color-accent)]/60
+                 hover:bg-white/10
+                 transition-all duration-[var(--duration-normal)]"
+        >
+          ↓ Download Form
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       §5 UPCOMING EVENTS (placeholder — data-driven later)
+       ══════════════════════════════════════════════════ -->
+  <section
+    class="section-spacing bg-[var(--color-base)]"
+    aria-labelledby="events-heading"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-10 flex-wrap gap-4">
+        <h2
+          id="events-heading"
+          style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;"
+        >
+          Upcoming <span class="text-[var(--color-accent)]">Events</span>
+        </h2>
+        <a
+          href="/events"
+          class="text-sm font-semibold no-underline text-[var(--color-primary)]
+                 border-b-2 border-[var(--color-accent)] pb-0.5
+                 hover:text-[var(--color-primary-dark)] transition-colors duration-[var(--duration-fast)]"
+        >
+          View All Events →
+        </a>
+      </div>
+
+      <!-- Placeholder cards — replace with dynamic data when events content is ready -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="events-grid">
+        {[
+          { date: 'Apr 10', month: 'APR', title: 'Annual Sports Day', venue: 'Main Campus Ground', tag: 'Sports' },
+          { date: 'Apr 18', month: 'APR', title: 'Science Exhibition', venue: 'Ellapalayam Campus Hall', tag: 'Academic' },
+          { date: 'May 2',  month: 'MAY', title: 'Parent–Teacher Meet', venue: 'All Campuses', tag: 'Community' },
+        ].map(({ date, month, title, venue, tag }) => (
+          <article
+            class="flex gap-4 p-5 bg-[var(--color-surface)] rounded-[var(--radius-lg)]
+                   border border-[var(--color-separator)] shadow-[var(--shadow-sm)]
+                   hover:shadow-[var(--shadow-md)] hover:-translate-y-0.5
+                   transition-all duration-[var(--duration-normal)]"
+          >
+            <!-- Date badge -->
+            <div
+              class="flex-shrink-0 w-14 h-14 rounded-[var(--radius-md)] flex flex-col items-center justify-center text-center"
+              style="background: var(--color-primary);"
+            >
+              <span class="text-[var(--color-accent)] text-xs font-bold uppercase tracking-widest leading-none">{month}</span>
+              <span class="text-[var(--color-text-on-dark)] text-xl font-bold leading-tight">{date.split(' ')[0]}</span>
+            </div>
+            <!-- Info -->
+            <div class="min-w-0">
+              <span
+                class="inline-block mb-1.5 px-2 py-0.5 rounded text-xs font-semibold"
+                style="background: var(--color-accent-light); color: var(--color-primary-dark);"
+              >
+                {tag}
+              </span>
+              <h3
+                class="font-semibold text-[var(--color-primary)] leading-snug mb-1 truncate"
+                style="font-family: var(--font-heading); font-size: var(--font-size-h4);"
+              >
+                {title}
+              </h3>
+              <p class="text-xs text-[var(--color-text-muted)]">📍 {venue}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       §6 OUR CAMPUSES
+       ══════════════════════════════════════════════════ -->
+  <section
+    class="section-spacing bg-[var(--color-surface-alt)]"
+    aria-labelledby="campuses-heading"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2
+          id="campuses-heading"
+          class="mb-3"
+          style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;"
+        >
+          Our <span class="gradient-text">Campuses</span>
+        </h2>
+        <p class="text-[var(--color-text-muted)] max-w-xl mx-auto leading-[var(--leading-relaxed)]">
+          Explore our two dynamic campuses, each designed to foster academic excellence.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto" role="list">
+        {campuses.map(({ id, name, location, type, facts }) => (
+          <div
+            role="listitem"
+            class="group bg-[var(--color-surface)] rounded-[var(--radius-lg)]
+                   border border-[var(--color-separator)]
+                   shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)]
+                   transition-all duration-[var(--duration-normal)] hover:-translate-y-1
+                   overflow-hidden"
+          >
+            <!-- Emerald header bar -->
+            <div
+              class="px-6 py-4 flex items-center gap-3"
+              style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));"
+            >
+              <div
+                class="w-10 h-10 rounded-full bg-[var(--color-accent)]/20 flex items-center justify-center text-[var(--color-accent)] text-xl flex-shrink-0"
+                aria-hidden="true"
+              >🏫</div>
+              <div>
+                <h3
+                  class="text-[var(--color-text-on-dark)] font-semibold leading-tight"
+                  style="font-family: var(--font-heading); font-size: var(--font-size-h4);"
+                >
+                  {name}
+                </h3>
+                <p class="text-[var(--color-text-on-dark)]/70 text-xs mt-0.5">📍 {location}</p>
+              </div>
+            </div>
+
+            <!-- Body -->
+            <a
+              href={`/campuses#${id}`}
+              class="block p-6 no-underline"
+              aria-label={`Learn more about ${name}`}
+            >
+              <!-- Type badge -->
+              <span
+                class="inline-block mb-4 px-3 py-1 rounded-full text-xs font-medium"
+                style="background: var(--color-accent-light); color: var(--color-primary-dark);"
+              >
+                {type}
+              </span>
+
+              <!-- Fact list -->
+              <ul class="space-y-2 list-none p-0 m-0">
+                {facts.map(fact => (
+                  <li class="flex items-start gap-2.5 text-sm text-[var(--color-text-muted)]">
+                    <span
+                      class="mt-0.5 flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center text-xs"
+                      style="background: var(--color-accent); color: var(--color-primary);"
+                      aria-hidden="true"
+                    >✓</span>
+                    {fact}
+                  </li>
+                ))}
+              </ul>
+
+              <!-- Hover CTA -->
+              <p
+                class="mt-5 text-xs font-semibold text-[var(--color-primary)] flex items-center gap-1
+                       opacity-0 group-hover:opacity-100 transition-opacity duration-[var(--duration-normal)]"
+              >
+                Learn more <span aria-hidden="true">→</span>
+              </p>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       §7 FINAL CTA — Download Form
+       ══════════════════════════════════════════════════ -->
+  <section
+    class="py-16 text-center bg-[var(--color-surface)]"
+    aria-labelledby="final-cta-heading"
+  >
+    <div class="max-w-2xl mx-auto px-4">
+      <h2
+        id="final-cta-heading"
+        class="mb-4"
+        style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;"
+      >
+        Ready to Join <span class="text-[var(--color-accent)]">Al-Ameen</span>?
+      </h2>
+      <p class="text-[var(--color-text-muted)] mb-8 leading-[var(--leading-relaxed)]">
+        Download our admission form and start your journey today.
+      </p>
+      <a
+        href="/assets/forms/admission-form.pdf"
+        download
+        class="inline-flex items-center gap-2 px-8 py-3.5 rounded-[var(--radius-md)]
+               font-semibold text-sm no-underline
+               bg-[var(--color-primary)] text-[var(--color-text-on-dark)]
+               hover:bg-[var(--color-primary-dark)]
+               shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]
+               transition-all duration-[var(--duration-normal)] hover:-translate-y-0.5"
+      >
+        ↓ Download Admission Form
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+
+<!-- ══════════════════════════════════════════════════
+     HERO SLIDER SCRIPT — no external dependencies
+     Uses Astro's component script (hoisted, deduped)
+     ══════════════════════════════════════════════════ -->
+<script>
+  const track   = document.getElementById('hero-track') as HTMLElement;
+  const dots    = document.querySelectorAll('[id^="hero-dot-"]');
+  const slides  = track?.children as HTMLCollectionOf<HTMLElement>;
+  const total   = slides?.length ?? 0;
+  let   current = 0;
+  let   timer: ReturnType<typeof setInterval>;
+
+  function goTo(index: number) {
+    if (!track || total === 0) return;
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * (100 / total)}%)`;
+
+    // Update dots
+    dots.forEach((dot, i) => {
+      const isActive = i === current;
+      dot.setAttribute('aria-selected', String(isActive));
+      dot.classList.toggle('w-6',         isActive);
+      dot.classList.toggle('bg-[var(--color-accent)]', isActive);
+      dot.classList.toggle('w-2.5',       !isActive);
+      dot.classList.toggle('bg-white/50', !isActive);
+    });
+
+    // Update aria-hidden on slides
+    Array.from(slides).forEach((slide, i) => {
+      slide.setAttribute('aria-hidden', String(i !== current));
+    });
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    timer = setInterval(() => goTo(current + 1), 5000);
+  }
+  function stopAutoplay() {
+    clearInterval(timer);
+  }
+
+  // Wire controls
+  document.getElementById('hero-prev')?.addEventListener('click', () => { goTo(current - 1); startAutoplay(); });
+  document.getElementById('hero-next')?.addEventListener('click', () => { goTo(current + 1); startAutoplay(); });
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => { goTo(i); startAutoplay(); });
+  });
+
+  // Pause on hover
+  track?.addEventListener('mouseenter', stopAutoplay);
+  track?.addEventListener('mouseleave', startAutoplay);
+
+  // Stop autoplay if user prefers reduced motion
+  const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!mq.matches) startAutoplay();
+  mq.addEventListener('change', e => e.matches ? stopAutoplay() : startAutoplay());
+
+  // Touch swipe support (for mid-range Android)
+  let touchStartX = 0;
+  track?.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track?.addEventListener('touchend',   (e) => {
+    const delta = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(delta) > 50) { goTo(current + (delta > 0 ? 1 : -1)); startAutoplay(); }
+  }, { passive: true });
+</script>

@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+/* Since the legacy events page fetches from a JSON file at runtime,
+   and we're migrating to SSG, we'll use static placeholder events.
+   These can be replaced with Astro Content Collections later. */
+
+const upcomingEvents = [
+  { id: 1, title: 'Annual Sports Day', date: '2026-04-15', time: '8:00 AM - 3:00 PM', location: 'Main Campus Ground', description: 'A day filled with athletic competitions, track events, and team sports for all grades.' },
+  { id: 2, title: 'Science Fair 2026', date: '2026-04-22', time: '10:00 AM - 2:00 PM', location: 'Auditorium, Karungalpalayam', description: 'Students showcase innovative science projects and experiments.' },
+  { id: 3, title: 'Parent-Teacher Meeting', date: '2026-04-28', time: '9:00 AM - 1:00 PM', location: 'Both Campuses', description: 'Quarterly progress review meeting for parents and teachers.' },
+  { id: 4, title: 'Quran Recitation Competition', date: '2026-05-05', time: '9:30 AM - 12:30 PM', location: 'Main Campus Auditorium', description: 'Annual inter-school Quran recitation and memorization competition.' },
+];
+
+const pastEvents = [
+  { id: 5, title: 'Republic Day Celebration', date: '2026-01-26', description: 'Flag hoisting ceremony and cultural programs celebrating national unity and heritage.' },
+  { id: 6, title: 'Annual Day 2025', date: '2025-12-15', description: 'Grand annual celebration featuring cultural performances, prize distribution, and guest speakers.' },
+  { id: 7, title: 'Milad-un-Nabi', date: '2025-09-27', description: 'Special assembly and celebrations marking the birthday of Prophet Muhammad (PBUH).' },
+];
+
+const holidays = [
+  { title: 'Summer Vacation', date: '2026-05-01', endDate: '2026-06-01', description: 'Annual summer break for students and staff.' },
+  { title: 'Eid al-Fitr', date: '2026-03-31', endDate: '2026-04-02', description: 'Celebration marking the end of Ramadan.' },
+  { title: 'Tamil New Year', date: '2026-04-14', description: 'Regional new year celebrations.' },
+];
+
+function formatDate(dateStr: string): string {
+  const d = new Date(dateStr);
+  return d.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
+}
+
+function getDay(dateStr: string): string {
+  return new Date(dateStr).getDate().toString().padStart(2, '0');
+}
+
+function getMonth(dateStr: string): string {
+  return new Date(dateStr).toLocaleString('en-US', { month: 'short' });
+}
+---
+
+<BaseLayout
+  title="Events"
+  description="Stay updated with Al-Ameen School's events, celebrations, and important dates."
+  activePage="events"
+>
+  <!-- Page Header -->
+  <section class="bg-[var(--color-surface-alt)] py-8 border-b border-[var(--color-separator)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: var(--font-size-h1); color: var(--color-primary); font-weight: 700;">
+          School Events
+        </h1>
+        <p class="text-[var(--color-text-muted)] mt-1">Stay updated with our school activities, celebrations, and important dates</p>
+      </div>
+      <nav aria-label="Breadcrumb" class="text-sm text-[var(--color-text-muted)]">
+        <a href="/" class="text-[var(--color-accent)] no-underline hover:underline">Home</a>
+        <span class="mx-1">›</span>
+        <span class="text-[var(--color-primary)] font-semibold">Events</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Upcoming Events -->
+  <section class="section-spacing relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.03;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        Upcoming <span class="gradient-text">Events</span>
+      </h2>
+      <p class="text-[var(--color-text-muted)] mb-8">Find details about our upcoming events and important dates.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {upcomingEvents.map(event => (
+          <div class="bg-[var(--color-surface)] rounded-[var(--radius-md)] p-4 border border-[var(--color-separator)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-md)] transition-shadow duration-[var(--duration-normal)] flex gap-4">
+            <div class="flex-shrink-0 w-16 text-center bg-[var(--color-accent)]/10 rounded-[var(--radius-sm)] p-2">
+              <div class="text-xl font-bold text-[var(--color-primary)]">{getDay(event.date)}</div>
+              <div class="text-xs text-[var(--color-accent)] font-medium uppercase">{getMonth(event.date)}</div>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h3 class="text-[var(--color-primary)] font-semibold text-sm mb-1">{event.title}</h3>
+              <p class="text-xs text-[var(--color-text-muted)] mb-0.5">🕐 {event.time}</p>
+              <p class="text-xs text-[var(--color-text-muted)] mb-1.5">📍 {event.location}</p>
+              <p class="text-xs text-[var(--color-text-muted)] leading-relaxed line-clamp-2">{event.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Events -->
+  <section class="section-spacing bg-[var(--color-surface-alt)] relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.04;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        Past Events
+      </h2>
+      <p class="text-[var(--color-text-muted)] mb-8">Take a look back at our school's memorable events and achievements.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {pastEvents.map(event => (
+          <div class="bg-[var(--color-surface)] rounded-[var(--radius-md)] overflow-hidden border border-[var(--color-separator)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)] hover:-translate-y-1 transition-all duration-[var(--duration-normal)]">
+            <div class="h-40 bg-[var(--color-surface-alt)] flex items-center justify-center">
+              <div class="text-center text-[var(--color-text-muted)]">
+                <div class="text-4xl mb-2">📅</div>
+                <p class="text-xs">{event.title}</p>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-[var(--color-primary)] font-semibold text-sm mb-1">{event.title}</h3>
+              <p class="text-xs text-[var(--color-text-muted)] mb-2">📅 {formatDate(event.date)}</p>
+              <p class="text-xs text-[var(--color-text-muted)] leading-relaxed">{event.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- School Holidays -->
+  <section class="section-spacing bg-[var(--color-surface)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        School <span class="text-[var(--color-accent)]">Holidays</span>
+      </h2>
+      <div class="w-10 h-1 rounded bg-[var(--color-accent)] mb-6" aria-hidden="true"></div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm border-collapse">
+          <thead>
+            <tr class="border-b-2 border-[var(--color-primary)]">
+              <th class="py-3 pr-4 text-[var(--color-primary)] font-semibold">Holiday</th>
+              <th class="py-3 pr-4 text-[var(--color-primary)] font-semibold">Date</th>
+              <th class="py-3 text-[var(--color-primary)] font-semibold">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {holidays.map(h => (
+              <tr class="border-b border-[var(--color-separator)] hover:bg-[var(--color-surface-alt)] transition-colors">
+                <td class="py-3 pr-4 font-medium text-[var(--color-text)]">{h.title}</td>
+                <td class="py-3 pr-4 text-[var(--color-text-muted)]">
+                  {formatDate(h.date)}{h.endDate ? ` – ${formatDate(h.endDate)}` : ''}
+                </td>
+                <td class="py-3 text-[var(--color-text-muted)]">{h.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

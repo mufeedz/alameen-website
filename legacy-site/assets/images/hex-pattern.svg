@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hexagonal grid pattern with varied opacity -->
+  <defs>
+    <pattern id="hexagonPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <!-- Hexagon 1 -->
+      <path d="M50 0L93.3 25V75L50 100L6.7 75V25L50 0Z" fill="white" fill-opacity="0.03"/>
+      <!-- Hexagon 2 -->
+      <path d="M150 0L193.3 25V75L150 100L106.7 75V25L150 0Z" fill="white" fill-opacity="0.02"/>
+      <!-- Hexagon 3 -->
+      <path d="M50 100L93.3 125V175L50 200L6.7 175V125L50 100Z" fill="white" fill-opacity="0.04"/>
+      <!-- Hexagon 4 -->
+      <path d="M150 100L193.3 125V175L150 200L106.7 175V125L150 100Z" fill="white" fill-opacity="0.02"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background fill using the pattern -->
+  <rect width="600" height="600" fill="url(#hexagonPattern)"/>
+</svg>

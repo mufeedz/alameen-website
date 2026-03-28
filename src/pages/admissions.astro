@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const eligibility = [
+  { icon: '🎓', text: 'Age-appropriate grade placement based on academic readiness' },
+  { icon: '📚', text: 'Previous academic performance demonstrating commitment to learning' },
+  { icon: '🤝', text: 'Willingness to participate in school community and values' },
+  { icon: '🗣️', text: 'Basic proficiency in English and/or local language of instruction' },
+];
+
+const documents = [
+  { icon: '📋', text: 'Birth Certificate (original and copy)' },
+  { icon: '📜', text: 'Transfer Certificate from previous school (original)' },
+  { icon: '🪪', text: 'Copy of Aadhaar card (or equivalent ID proof)' },
+];
+
+const steps = [
+  { num: '01', icon: '📝', title: 'Application Submission', body: 'Complete our admission form with all required documents and application fee of ₹500.' },
+  { num: '02', icon: '📋', title: 'Entrance Assessment', body: 'Grade-appropriate assessment in core subjects including English, Mathematics, and Science (60-90 minutes).' },
+  { num: '03', icon: '👨‍👩‍👧', title: 'Parent & Student Interview', body: 'Meet with our administrators to discuss expectations, values alignment, and academic goals (20-30 minutes).' },
+  { num: '04', icon: '✅', title: 'Admission Confirmation', body: 'Receive acceptance letter and complete enrollment with fee payment and agreement signing within 7 days.' },
+];
+
+const meritScholarships = [
+  { icon: '🏆', label: 'Board Toppers', text: 'Special scholarships for state and district level achievers' },
+  { icon: '🥇', label: 'Sports Excellence', text: 'Scholarships for students with outstanding achievements in sports at state or national level.' },
+  { icon: '📖', label: 'Hifz Scholarship', text: 'For students who have memorized the Quran, to honor their dedication and commitment.' },
+];
+
+const needBased = [
+  { icon: '💰', label: 'Financial Hardship', text: 'Partial to full fee assistance based on family income assessment' },
+  { icon: '❤️', label: 'Orphan Students', text: 'Special provisions for students without parental support' },
+  { icon: '🛟', label: 'Emergency Support', text: 'Temporary aid during unexpected financial difficulties' },
+];
+---
+
+<BaseLayout
+  title="Admissions"
+  description="Learn about Al-Ameen School's admission process, eligibility criteria, and download application forms."
+  activePage="admissions"
+>
+  <!-- Page Header -->
+  <section class="bg-[var(--color-surface-alt)] py-8 border-b border-[var(--color-separator)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: var(--font-size-h1); color: var(--color-primary); font-weight: 700;">
+          Join Our Community
+        </h1>
+        <p class="text-[var(--color-text-muted)] mt-1">Admissions information for prospective Al-Ameen students and families</p>
+      </div>
+      <nav aria-label="Breadcrumb" class="text-sm text-[var(--color-text-muted)]">
+        <a href="/" class="text-[var(--color-accent)] no-underline hover:underline">Home</a>
+        <span class="mx-1">›</span>
+        <span class="text-[var(--color-primary)] font-semibold">Admissions</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Admission Requirements -->
+  <section class="section-spacing relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.03;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        Admission <span class="gradient-text">Requirements</span>
+      </h2>
+      <p class="text-center text-[var(--color-text-muted)] mb-10 max-w-2xl mx-auto">Al-Ameen School welcomes applications from students who meet our eligibility criteria and can provide the required documentation.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Eligibility -->
+        <div class="bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-6 border border-[var(--color-separator)] shadow-[var(--shadow-sm)]">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">✅</span>
+            <h3 class="text-[var(--color-primary)] font-semibold" style="font-family: var(--font-heading); font-size: var(--font-size-h3);">Eligibility Criteria</h3>
+          </div>
+          <ul class="space-y-3 list-none p-0 m-0">
+            {eligibility.map(({ icon, text }) => (
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 text-lg mt-0.5">{icon}</span>
+                <span class="text-[var(--color-text-muted)] text-sm leading-[var(--leading-relaxed)]">{text}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-xs text-[var(--color-text-muted)] italic mt-4">* Admission is subject to availability of seats. Preference is given to siblings of existing students and children of alumni.</p>
+        </div>
+
+        <!-- Documents -->
+        <div class="bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-6 border border-[var(--color-separator)] shadow-[var(--shadow-sm)]">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">📄</span>
+            <h3 class="text-[var(--color-primary)] font-semibold" style="font-family: var(--font-heading); font-size: var(--font-size-h3);">Required Documents</h3>
+          </div>
+          <ul class="space-y-3 list-none p-0 m-0">
+            {documents.map(({ icon, text }) => (
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 text-lg mt-0.5">{icon}</span>
+                <span class="text-[var(--color-text-muted)] text-sm leading-[var(--leading-relaxed)]">{text}</span>
+              </li>
+            ))}
+          </ul>
+          <p class="text-xs text-[var(--color-text-muted)] italic mt-4">All documents must be submitted together. Incomplete applications will not be processed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Overview -->
+  <section class="py-14 relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.08;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center text-[var(--color-text-on-dark)] mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); font-weight: 600;">
+        Process <span class="text-[var(--color-accent)]">Overview</span>
+      </h2>
+      <p class="text-center text-[var(--color-text-on-dark)]/80 mb-10 max-w-2xl mx-auto">Follow these steps to apply for admission to Al-Ameen School and join our community of learners.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {steps.map(({ num, icon, title, body }) => (
+          <div class="bg-white/10 backdrop-blur-sm rounded-[var(--radius-lg)] p-6 text-center relative hover:-translate-y-1 transition-transform duration-[var(--duration-normal)]">
+            <div class="absolute top-2 right-3 text-5xl font-black text-white/5">{num}</div>
+            <div class="text-3xl mb-3">{icon}</div>
+            <h3 class="text-[var(--color-text-on-dark)] font-semibold text-sm mb-2">{title}</h3>
+            <p class="text-[var(--color-text-on-dark)]/70 text-xs leading-[var(--leading-relaxed)]">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Scholarships & Financial Aid -->
+  <section class="section-spacing bg-[var(--color-surface)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center mb-2" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        <span class="gradient-text">Scholarships</span> & Financial Aid
+      </h2>
+      <p class="text-center text-[var(--color-text-muted)] mb-10 max-w-2xl mx-auto">Al-Ameen School believes in making quality education accessible to deserving students through various scholarship and financial aid programs.</p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+        <!-- Merit -->
+        <div class="bg-[var(--color-base)] rounded-[var(--radius-lg)] p-6 border border-[var(--color-separator)] shadow-[var(--shadow-sm)]">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🏅</span>
+            <h3 class="text-[var(--color-primary)] font-semibold" style="font-family: var(--font-heading); font-size: var(--font-size-h3);">Merit-Based Scholarships</h3>
+          </div>
+          <ul class="space-y-4 list-none p-0 m-0">
+            {meritScholarships.map(({ icon, label, text }) => (
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 text-lg mt-0.5">{icon}</span>
+                <div>
+                  <strong class="text-[var(--color-primary)] text-sm">{label}:</strong>
+                  <span class="text-[var(--color-text-muted)] text-sm"> {text}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Need-based -->
+        <div class="bg-[var(--color-base)] rounded-[var(--radius-lg)] p-6 border border-[var(--color-separator)] shadow-[var(--shadow-sm)]">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">💝</span>
+            <h3 class="text-[var(--color-primary)] font-semibold" style="font-family: var(--font-heading); font-size: var(--font-size-h3);">Need-Based Financial Aid</h3>
+          </div>
+          <ul class="space-y-4 list-none p-0 m-0">
+            {needBased.map(({ icon, label, text }) => (
+              <li class="flex items-start gap-3">
+                <span class="flex-shrink-0 text-lg mt-0.5">{icon}</span>
+                <div>
+                  <strong class="text-[var(--color-primary)] text-sm">{label}:</strong>
+                  <span class="text-[var(--color-text-muted)] text-sm"> {text}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- How to Apply for Financial Aid -->
+      <div class="bg-[var(--color-surface-alt)] rounded-[var(--radius-lg)] p-6 border border-[var(--color-separator)]">
+        <h3 class="text-[var(--color-primary)] font-semibold mb-4" style="font-family: var(--font-heading); font-size: var(--font-size-h4);">How to Apply for Financial Assistance</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="md:col-span-2">
+            <ol class="space-y-2 list-none p-0 m-0 counter-reset-none">
+              {['Submit scholarship application form along with admission application', 'Provide income certificates and supporting financial documents', 'Complete family background verification process', 'Appear for scholarship interview (if shortlisted)', 'Receive scholarship decision within 10 working days'].map((step, i) => (
+                <li class="flex items-start gap-3">
+                  <span class="flex-shrink-0 w-6 h-6 rounded-full bg-[var(--color-accent)] flex items-center justify-center text-xs font-bold text-[var(--color-primary)]">{i + 1}</span>
+                  <span class="text-sm text-[var(--color-text-muted)]">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div class="bg-[var(--color-surface)] rounded-[var(--radius-md)] p-4 text-center">
+            <h4 class="text-[var(--color-primary)] font-semibold text-sm mb-2">Scholarship Office</h4>
+            <p class="text-sm text-[var(--color-text-muted)] mb-1">📧 scholarships@alameen.edu</p>
+            <p class="text-sm text-[var(--color-text-muted)] mb-1">📞 +91-8015053189</p>
+            <p class="text-xs text-[var(--color-text-muted)]">Monday-Saturday, 8:45 AM - 4:30 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Need Assistance -->
+  <section class="section-spacing bg-[var(--color-surface-alt)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-8 border border-[var(--color-separator)] shadow-[var(--shadow-md)]">
+        <div class="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start">
+          <div class="text-5xl text-center md:text-left">🎧</div>
+          <div>
+            <h2 class="mb-3" style="font-family: var(--font-heading); font-size: var(--font-size-h3); color: var(--color-primary); font-weight: 600;">
+              Need <span class="gradient-text">Assistance</span> with Admissions?
+            </h2>
+            <p class="text-[var(--color-text-muted)] text-sm leading-[var(--leading-relaxed)] mb-6">Our dedicated admissions team is here to help you through every step of the application process. Whether you have questions about eligibility, need help with forms, or want to schedule a campus visit, we're here to support you.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div>
+                <h4 class="text-[var(--color-primary)] font-semibold text-sm mb-1">📞 Phone Support</h4>
+                <p class="text-sm text-[var(--color-text-muted)]">+91-8015053189</p>
+                <p class="text-xs text-[var(--color-text-muted)]">Mon-Sat: 8:45 AM - 4:30 PM</p>
+              </div>
+              <div>
+                <h4 class="text-[var(--color-primary)] font-semibold text-sm mb-1">📧 Email Support</h4>
+                <p class="text-sm text-[var(--color-text-muted)]">admissions@alameen.edu</p>
+                <p class="text-xs text-[var(--color-text-muted)]">Response within 24 hours</p>
+              </div>
+              <div>
+                <h4 class="text-[var(--color-primary)] font-semibold text-sm mb-1">📍 Visit Us</h4>
+                <p class="text-sm text-[var(--color-text-muted)]">Admissions Office</p>
+                <p class="text-xs text-[var(--color-text-muted)]">Campus tours available</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="/contact" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold text-[var(--color-text-on-dark)] bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] transition-colors duration-[var(--duration-normal)]">
+                💬 Contact Us
+              </a>
+              <a href="/campuses" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-sm font-semibold text-[var(--color-primary)] border-2 border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-text-on-dark)] transition-colors duration-[var(--duration-normal)]">
+                📅 Schedule Campus Visit
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

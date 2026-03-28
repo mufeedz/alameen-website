@@ -1,0 +1,200 @@
+/* =============================================================================
+   Al-Ameen School — Design Tokens
+   Source of truth for all CSS custom properties.
+   Derived from MANIFEST.md §1.1 (Color Palette) and §1.2 (Typography).
+   Import order: tokens.css → global.css → component styles
+   ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   §1.1 COLOR PALETTE
+   ----------------------------------------------------------------------------- */
+:root {
+  /* --- Core Brand ----------------------------------------------------------- */
+  /* Deep Emerald: primary brand color — nav, headers, primary buttons */
+  --color-primary:       #064E3B;
+  /* Hover/pressed states for primary surfaces */
+  --color-primary-dark:  #043D2E;
+  /* Lighter variant for gradients and tinted backgrounds */
+  --color-primary-light: #065F46;
+
+  /* Metallic Gold: CTAs, badges, highlights, decorative borders */
+  --color-accent:        #D4AF37;
+  /* Soft gold for hover fills and light backgrounds */
+  --color-accent-light:  #E8D07A;
+  /* Deep gold for active/pressed accent states */
+  --color-accent-dark:   #B8960C;
+
+  /* --- Backgrounds & Surfaces ---------------------------------------------- */
+  /* Warm Paper White — default page background */
+  --color-base:          #F9F9F9;
+  /* Pure white — card and modal surfaces */
+  --color-surface:       #FFFFFF;
+  /* Warm off-white — alternating section backgrounds */
+  --color-surface-alt:   #F3F4EE;
+  /* Warm gray — dividers and borders */
+  --color-separator:     #E4E4D8;
+
+  /* --- Text ----------------------------------------------------------------- */
+  /* Near-black — primary body text */
+  --color-text:          #1C1C1C;
+  /* Medium gray — secondary / helper text */
+  --color-text-muted:    #5A5A5A;
+  /* Light text for use on dark (emerald/primary) surfaces */
+  --color-text-on-dark:  #F9F9F9;
+
+  /* --- Status & Utility ----------------------------------------------------- */
+  /* Error, urgent notices */
+  --color-alert:         #C0392B;
+  /* Confirmation, success states */
+  --color-success:       #1A7F4B;
+
+  /* --- Semantic aliases (helpful for Tailwind @theme / component use) ------- */
+  --color-foreground:    var(--color-text);
+  --color-background:    var(--color-base);
+  --color-border:        var(--color-separator);
+}
+
+
+/* -----------------------------------------------------------------------------
+   §1.2 TYPOGRAPHY
+   ----------------------------------------------------------------------------- */
+:root {
+  /* --- Font Families -------------------------------------------------------- */
+  /* Reem Kufi: h2–h4 section headings. Traditional Arabic-Latin geometry. */
+  --font-heading:  'Reem Kufi', serif;
+  /* Amiri: h1, hero display, pull quotes only. Heavy at small sizes — avoid < 28px. */
+  --font-display:  'Amiri', serif;
+  /* Inter: all body copy, navigation, UI labels, form fields. */
+  --font-body:     'Inter', system-ui, -apple-system, sans-serif;
+
+  /* --- Font Sizes (fluid / clamp) ------------------------------------------ */
+  /* h1 / page title */
+  --font-size-h1:    clamp(1.75rem, 5vw, 3rem);
+  /* h2 / section headings */
+  --font-size-h2:    clamp(1.4rem, 3.5vw, 2.25rem);
+  /* h3 / card and subsection titles */
+  --font-size-h3:    clamp(1.15rem, 2.5vw, 1.6rem);
+  /* h4 / minor headings */
+  --font-size-h4:    clamp(1rem, 1.75vw, 1.25rem);
+  /* Body paragraph text */
+  --font-size-body:  clamp(0.9375rem, 2vw, 1.0625rem);
+  /* Labels, captions, meta text */
+  --font-size-small: 0.8125rem;
+
+  /* --- Font Weights --------------------------------------------------------- */
+  --font-weight-light:   300;
+  --font-weight-normal:  400;
+  --font-weight-medium:  500;
+  --font-weight-semi:    600;
+  --font-weight-bold:    700;
+
+  /* --- Line Heights --------------------------------------------------------- */
+  /* Tight: large display headings */
+  --leading-tight:   1.15;
+  /* Snug: card/component headings */
+  --leading-snug:    1.3;
+  /* Normal: subheadings */
+  --leading-normal:  1.5;
+  /* Relaxed: body paragraphs, max readability */
+  --leading-relaxed: 1.65;
+
+  /* --- Letter Spacing ------------------------------------------------------- */
+  /* Display/hero headings: slight optical tightening */
+  --tracking-tight:  -0.025em;
+  /* Body text: default, no adjustment */
+  --tracking-normal:  0em;
+  /* Small caps, labels, badges: open up slightly */
+  --tracking-wide:    0.05em;
+  /* All-caps utility labels */
+  --tracking-widest:  0.1em;
+}
+
+
+/* -----------------------------------------------------------------------------
+   §1.3 SPACING SCALE (4px base)
+   ----------------------------------------------------------------------------- */
+:root {
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+
+  /* --- Semantic spacing aliases --------------------------------------------- */
+  --section-pad-y-mobile:  var(--space-12);
+  --section-pad-y-desktop: var(--space-16);
+  --card-padding:          var(--space-6);
+  --card-gap:              var(--space-6);
+}
+
+
+/* -----------------------------------------------------------------------------
+   §1.3 SHAPE & RADIUS
+   ----------------------------------------------------------------------------- */
+:root {
+  /* Inputs, small badges */
+  --radius-sm:   4px;
+  /* Cards, buttons */
+  --radius-md:   10px;
+  /* Modals, large containers */
+  --radius-lg:   20px;
+  /* Islamic pointed arch — use on image containers */
+  --radius-arch: 50% 50% 0 0 / 60% 60% 0 0;
+}
+
+
+/* -----------------------------------------------------------------------------
+   §1.3 ELEVATION / SHADOWS (warm emerald tint)
+   ----------------------------------------------------------------------------- */
+:root {
+  --shadow-sm: 0 1px 3px rgba(6, 78, 59, 0.06);
+  --shadow-md: 0 4px 12px rgba(6, 78, 59, 0.08),
+               0 1px 4px  rgba(6, 78, 59, 0.04);
+  --shadow-lg: 0 12px 30px rgba(6, 78, 59, 0.12),
+               0 4px  8px  rgba(6, 78, 59, 0.06);
+}
+
+
+/* -----------------------------------------------------------------------------
+   §1.4 BREAKPOINTS (mobile-first; for reference — use in CSS @media queries)
+   Values also available as custom media if PostCSS custom-media is enabled.
+   ----------------------------------------------------------------------------- */
+/*
+  sm:  480px   — larger phones
+  md:  768px   — tablets / landscape phones
+  lg:  1024px  — small laptops
+  xl:  1280px  — desktops
+*/
+:root {
+  --bp-sm:  480px;
+  --bp-md:  768px;
+  --bp-lg:  1024px;
+  --bp-xl:  1280px;
+}
+
+
+/* -----------------------------------------------------------------------------
+   §1.5 MOTION
+   Respect prefers-reduced-motion. Define durations here so components
+   can reference them rather than hard-coding values.
+   ----------------------------------------------------------------------------- */
+:root {
+  --duration-fast:    150ms;
+  --duration-normal:  250ms;
+  --duration-slow:    400ms;
+  --ease-standard:    cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-decelerate:  cubic-bezier(0, 0, 0.2, 1);
+  --ease-accelerate:  cubic-bezier(0.4, 0, 1, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast:   0ms;
+    --duration-normal: 0ms;
+    --duration-slow:   0ms;
+  }
+}

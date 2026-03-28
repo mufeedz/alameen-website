@@ -1,62 +1,43 @@
-# Al-Ameen School Website
+# Astro Starter Kit: Minimal
 
-## Overview
+```sh
+npm create astro@latest -- --template minimal
+```
 
-This website is for Al-Ameen Matriculation Higher Secondary School. It aims to provide a modern, accessible, and visually appealing static site that communicates the school’s values, programs, and community to prospective students, parents, and stakeholders.
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-## Tech Stack
+## 🚀 Project Structure
 
-- **HTML5** (semantic markup)
-- **Bootstrap 5** (responsive layout, no jQuery)
-- **Modular CSS** using BEM methodology
-- **Vanilla JavaScript** for lightweight interactivity
-- **WCAG 2.1 AA** accessibility compliance
+Inside of your Astro project, you'll see the following folders and files:
 
-## Key Features
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-- Responsive design for all devices
-- SEO and performance optimized
-- Downloadable admissions forms (PDF/Word)
-- Embedded maps (no contact forms)
-- Islamic design elements:
-  - SVG patterns (star, rosette, girih tile, arabesque border)
-  - Pointed arch UI components
-  - Subtle background motifs respecting accessibility
-- All content in English
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-## Production Structure
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
 
-- **Root**: Only production HTML files, `.nojekyll`, and `README.md`.
-- **assets/**: Only used CSS, JS, images, and forms.
-- **partials/**: Only header and footer includes.
-- **docs/**: All Markdown documentation, not published.
-- **.vscode/** and `.idx/`: Editor configs, not published.
+Any static assets, like images, can be placed in the `public/` directory.
 
-## Deployment
+## 🧞 Commands
 
-- Deploy from the root folder (not `docs/`).
-- `.nojekyll` prevents Jekyll processing on GitHub Pages.
-- Only production files are published.
+All commands are run from the root of the project, from a terminal:
 
-## Branch Protection
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-- **Main branch**: Protected - only accepts PRs from `dev` branch
-- **Dev branch**: Protected - requires PRs for all changes
-- **Direct pushes**: Blocked to both `main` and `dev` branches
-- **Branch deletion**: Prevented for `main` and `dev` branches
-- Enforced via GitHub Actions workflow (`.github/workflows/branch-protection-enforcer.yml`)
+## 👀 Want to learn more?
 
-## Documentation
-
-- All documentation and plans are in `docs/`.
-- Key docs: `docs/style-guide.md`, `docs/changelog.md`, `docs/copilot-instructions.md`, `docs/website_redesign_specifications.md`.
-
-## Maintenance
-
-- Remove unused files regularly.
-- Only keep production assets in `assets/`.
-- Update documentation in `docs/` as needed.
-
----
-
-For detailed requirements and design principles, see the documentation in `docs/`.
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

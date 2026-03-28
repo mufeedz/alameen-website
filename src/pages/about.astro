@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const stats = [
+  { icon: '👨‍🎓', value: '1500+', label: 'Students' },
+  { icon: '👩‍🏫', value: '150+',  label: 'Faculty' },
+  { icon: '📅', value: '1983',  label: 'Established' },
+  { icon: '🏆', value: '100%',  label: 'Success Rate' },
+  { icon: '🎓', value: '42+',   label: 'Years Legacy' },
+];
+
+const values = [
+  { icon: '📚', title: 'Academic Excellence', body: 'Rigorous curriculum and personalized learning' },
+  { icon: '🌙', title: 'Islamic Values', body: 'Moral education and character development rooted in Islamic principles' },
+  { icon: '🤝', title: 'Community', body: 'Strong partnerships between students, parents, and faculty' },
+  { icon: '🌍', title: 'Global Citizenship', body: 'Preparing students for a global future' },
+];
+
+const timeline = [
+  { year: '1983', title: 'Foundation of Excellence', body: 'Al-Ameen School opens on Kaveri Road, Erode, in a rent-free thatched shed with 30 students and two teachers.' },
+  { year: '1984', title: 'Permanent Foundation', body: 'Moves to permanent Wakf land with a concrete terrace building.' },
+  { year: '1992', title: 'Campus Expansion', body: 'Second campus constructed at Villarasampatti, expanding capacity.' },
+  { year: '1992–94', title: 'Higher Secondary Upgrade', body: '10th standard begins 1992-93, 12th standard in 1993-94.' },
+  { year: '2005', title: 'Recognition & Accreditation', body: 'State Board affiliation with English medium, Tamil mandatory, Hindi optional.' },
+  { year: '2011', title: 'Silver Jubilee', body: 'Grand celebration on July 30, 2011, marking 25 years of excellence.' },
+  { year: '2020', title: 'Digital Innovation', body: 'Online learning platforms launched during global challenges.' },
+  { year: 'Today', title: 'Leading the Future', body: 'Over 1,500 students and a 100% success rate, setting new standards.' },
+];
+
+const trustFacts = ['Non-profit organization', 'Community governance', 'Transparent management', 'Continuous improvement'];
+---
+
+<BaseLayout
+  title="About"
+  description="Learn about Al-Ameen School's history, mission, values, and the trust that guides us."
+  activePage="about"
+>
+  <!-- Page Header -->
+  <section class="bg-[var(--color-surface-alt)] py-8 border-b border-[var(--color-separator)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div>
+        <h1 style="font-family: var(--font-heading); font-size: var(--font-size-h1); color: var(--color-primary); font-weight: 700;">
+          About Al-Ameen School
+        </h1>
+        <p class="text-[var(--color-text-muted)] mt-1">Nurturing Excellence Through Islamic Values & Academic Achievement</p>
+      </div>
+      <nav aria-label="Breadcrumb" class="text-sm text-[var(--color-text-muted)]">
+        <a href="/" class="text-[var(--color-accent)] no-underline hover:underline">Home</a>
+        <span class="mx-1">›</span>
+        <span class="text-[var(--color-primary)] font-semibold">About</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="section-spacing relative overflow-hidden" aria-labelledby="our-story">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.04;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 id="our-story" class="mb-5" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+          Our <span class="gradient-text">Story</span>
+        </h2>
+        <p class="text-lg leading-[var(--leading-relaxed)] text-[var(--color-text)] mb-4">
+          From humble beginnings to educational excellence, Al-Ameen School has been a beacon of learning, character development, and Islamic values for over four decades.
+        </p>
+        <p class="text-[var(--color-text-muted)] leading-[var(--leading-relaxed)]">
+          Founded in 1983 in a rent-free thatched shed on Kaveri Road, Erode, with just 30 students and two dedicated teachers, Al-Ameen began with a vision to provide quality education rooted in Islamic principles.
+        </p>
+      </div>
+      <div class="flex justify-center">
+        <div class="relative">
+          <div class="absolute -top-4 -right-4 w-full h-full border-4 border-[var(--color-accent)]/25" style="border-radius: var(--radius-arch);" aria-hidden="true"></div>
+          <div class="overflow-hidden shadow-[var(--shadow-lg)] w-72 sm:w-80 lg:w-96" style="border-radius: var(--radius-arch); aspect-ratio: 3/4;">
+            <img src="/images/slider-2.webp" alt="Al-Ameen School — historical view" class="w-full h-full object-cover hover:scale-105 transition-transform duration-[600ms]" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Counter -->
+  <section class="py-6 bg-[var(--color-primary)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 lg:grid-cols-5 gap-6">
+      {stats.map(({ icon, value, label }) => (
+        <div class="text-center py-4">
+          <div class="text-2xl mb-2">{icon}</div>
+          <div class="text-[var(--color-accent)] text-2xl font-bold">{value}</div>
+          <div class="text-[var(--color-text-on-dark)]/70 text-sm mt-1">{label}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Islamic Calligraphy Quote -->
+  <section class="py-10 text-center relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.08;" aria-hidden="true"></div>
+    <div class="relative max-w-2xl mx-auto px-4">
+      <p class="text-3xl text-[var(--color-accent-light)]" style="font-family: 'Amiri', serif;" lang="ar" dir="rtl">
+        رَبِّ زِدْنِي عِلْمًا
+      </p>
+      <p class="text-[var(--color-text-on-dark)]/80 mt-2 italic">"My Lord, increase me in knowledge"</p>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section class="section-spacing bg-[var(--color-surface)]" aria-labelledby="mission-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 id="mission-heading" class="text-center mb-10" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+        Mission & <span class="text-[var(--color-accent)]">Vision</span>
+      </h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {[
+          { icon: '💡', title: 'Our Mission', body: 'To empower students with knowledge, character, and faith—fostering academic excellence, moral integrity, and a sense of responsibility to society and the Ummah.' },
+          { icon: '👁️', title: 'Our Vision', body: 'To be a leading institution recognized for nurturing well-rounded individuals who excel academically, uphold Islamic values, and contribute positively to the world.' },
+        ].map(({ icon, title, body }) => (
+          <div class="bg-[var(--color-base)] rounded-[var(--radius-lg)] p-8 border border-[var(--color-separator)] shadow-[var(--shadow-sm)] hover:shadow-[var(--shadow-lg)] transition-all duration-[var(--duration-normal)]">
+            <div class="text-3xl mb-3">{icon}</div>
+            <div class="w-10 h-1 rounded bg-[var(--color-accent)] mb-4" aria-hidden="true"></div>
+            <h3 class="text-[var(--color-primary)] font-semibold mb-3" style="font-family: var(--font-heading); font-size: var(--font-size-h3);">{title}</h3>
+            <p class="text-[var(--color-text-muted)] leading-[var(--leading-relaxed)]">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Values -->
+  <section class="py-14 relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));">
+    <div class="absolute inset-0 pointer-events-none" style="background-image: url('/images/girih-about.svg'); background-size: 160px; opacity: 0.06;" aria-hidden="true"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center text-[var(--color-text-on-dark)] mb-10" style="font-family: var(--font-heading); font-size: var(--font-size-h2); font-weight: 600;">
+        Our <span class="text-[var(--color-accent)]">Values</span>
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        {values.map(({ icon, title, body }) => (
+          <div class="bg-white/10 backdrop-blur-sm rounded-[var(--radius-lg)] p-5 hover:-translate-y-1 transition-transform duration-[var(--duration-normal)]">
+            <div class="text-3xl mb-3">{icon}</div>
+            <h3 class="text-[var(--color-text-on-dark)] font-semibold text-sm mb-2">{title}</h3>
+            <p class="text-[var(--color-text-on-dark)]/70 text-xs leading-relaxed">{body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Journey + Trust -->
+  <section class="section-spacing bg-[var(--color-surface-alt)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <!-- Timeline -->
+      <div class="lg:col-span-2">
+        <h2 class="mb-6" style="font-family: var(--font-heading); font-size: var(--font-size-h2); color: var(--color-primary); font-weight: 600;">
+          Our <span class="text-[var(--color-accent)]">Journey</span>
+        </h2>
+        <div class="w-10 h-1 rounded bg-[var(--color-accent)] mb-8" aria-hidden="true"></div>
+        <div class="space-y-6">
+          {timeline.map(({ year, title, body }) => (
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-3 h-3 rounded-full bg-[var(--color-accent)] mt-1.5 ring-4 ring-[var(--color-accent)]/20"></div>
+              <div>
+                <h3 class="text-[var(--color-primary)] font-semibold" style="font-family: var(--font-heading); font-size: var(--font-size-h4);">{year}: {title}</h3>
+                <p class="text-sm text-[var(--color-text-muted)] mt-1 leading-[var(--leading-relaxed)]">{body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Trust Card -->
+      <div>
+        <div class="bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-6 border border-[var(--color-separator)] shadow-[var(--shadow-sm)] sticky top-24">
+          <h2 class="mb-4" style="font-family: var(--font-heading); font-size: var(--font-size-h3); color: var(--color-primary); font-weight: 600;">
+            Our <span class="text-[var(--color-accent)]">Trust</span>
+          </h2>
+          <div class="w-8 h-0.5 bg-[var(--color-accent)] mb-4" aria-hidden="true"></div>
+          <div class="text-center mb-4">
+            <div class="w-16 h-16 rounded-full bg-[var(--color-surface-alt)] mx-auto flex items-center justify-center">
+              <img src="/images/rosette-pattern.svg" alt="" class="w-10 h-10" />
+            </div>
+            <h3 class="text-[var(--color-primary)] font-semibold text-sm mt-3">Al-Ameen Educational Trust</h3>
+            <p class="text-xs text-[var(--color-text-muted)]">Established 1983 | Wakf Land Since 1984</p>
+          </div>
+          <p class="text-sm text-[var(--color-text-muted)] leading-[var(--leading-relaxed)] mb-4">
+            Managed by the Al-Ameen Educational Trust, committed to upholding the highest standards of education, combining academic excellence with Islamic values.
+          </p>
+          <ul class="space-y-2 list-none p-0 m-0">
+            {trustFacts.map(fact => (
+              <li class="flex items-center gap-2 text-sm text-[var(--color-text-muted)]">
+                <span class="flex-shrink-0 w-4 h-4 rounded-full bg-[var(--color-accent)] flex items-center justify-center text-[10px] text-[var(--color-primary)]" aria-hidden="true">✓</span>
+                {fact}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

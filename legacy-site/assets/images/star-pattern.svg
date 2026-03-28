@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <pattern id="star-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <!-- 8-pointed star -->
+      <path d="M100,10 L117,83 L190,100 L117,117 L100,190 L83,117 L10,100 L83,83 Z" fill="none" stroke="#1c4c4c" stroke-width="1" opacity="0.15" />
+      
+      <!-- Inner star -->
+      <path d="M100,40 L110,85 L155,100 L110,115 L100,160 L90,115 L45,100 L90,85 Z" fill="none" stroke="#e0b144" stroke-width="1" opacity="0.15" />
+      
+      <!-- Connect lines -->
+      <path d="M10,100 L190,100 M100,10 L100,190 M25,25 L175,175 M25,175 L175,25" fill="none" stroke="#1c4c4c" stroke-width="0.5" opacity="0.1" />
+      
+      <!-- Center circle -->
+      <circle cx="100" cy="100" r="15" fill="none" stroke="#e0b144" stroke-width="1" opacity="0.2" />
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#star-pattern)" />
+</svg>
