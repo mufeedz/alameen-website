@@ -6,7 +6,7 @@
   <title>Events - Al-Ameen School</title>
   
   <!-- Performance optimizations: Preload critical assets -->
-  <link rel="preload" href="assets/images/logo-placeholder.png" as="image">
+  <link rel="preload" href="assets/images/logo.svg" as="image" type="image/svg+xml">
   <link rel="preload" href="assets/css/main.css" as="style">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,109 +29,6 @@
   
   <!-- For WCAG compliance -->
   <meta name="theme-color" content="#1c4c4c">
-  
-  <style>
-    .event-modal .modal-header {
-      background-color: var(--color-primary);
-      color: white;
-    }
-    .event-modal .event-date {
-      background-color: var(--color-accent);
-      color: var(--color-text);
-      padding: 0.5rem;
-      border-radius: 0.25rem;
-      text-align: center;
-      font-weight: bold;
-    }
-    .event-filter {
-      margin-bottom: 20px;
-    }
-    .event-filter .btn {
-      margin-right: 5px;
-      margin-bottom: 5px;
-    }
-    .event-filter .btn.active {
-      background-color: var(--color-primary);
-      color: white;
-    }
-    /* Improved filter button styling */
-    .event-filter .btn {
-      transition: all 0.2s ease;
-      border-radius: 20px;
-      padding: 0.5rem 1rem;
-      font-weight: 500;
-    }
-    
-    /* Fix filter button hover states */
-    .event-filter .btn--primary:hover {
-      background-color: var(--color-primary-dark, #0a2833) !important;
-      border-color: var(--color-primary-dark, #0a2833) !important;
-      color: white !important;
-      transform: translateY(-1px);
-      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
-    }
-    
-    .event-filter .btn--outline-primary:hover {
-      background-color: var(--color-primary, #0e3147) !important;
-      border-color: var(--color-primary, #0e3147) !important;
-      color: white !important;
-      transform: translateY(-1px);
-      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
-    }
-    
-    .event-filter .btn.active:hover {
-      background-color: var(--color-primary-dark, #0a2833) !important;
-      color: white !important;
-    }
-    
-    /* Make empty columns less noticeable when filtered */
-    .no-events-message {
-      background-color: rgba(240, 240, 240, 0.5);
-      border-left: 4px solid #ddd;
-      padding: 2rem;
-      text-align: center;
-      background-color: #f0f0f0;
-      border-radius: 0.25rem;
-      font-style: italic;
-      color: #666;
-    }
-    /* Animation for loading state */
-    @keyframes pulse {
-      0% { opacity: 0.6; }
-      50% { opacity: 1; }
-      100% { opacity: 0.6; }
-    }
-    .loading {
-      animation: pulse 1.5s infinite;
-      background-color: #f0f0f0;
-      border-radius: 0.25rem;
-      height: 120px;
-      margin-bottom: 20px;
-    }
-    
-    /* Past events card button fixes */
-    .past-event-btn {
-      min-width: 100px !important;
-      font-weight: 500;
-    }
-    
-    .card-body.d-flex.flex-column {
-      height: 100% !important;
-    }
-    
-    /* Ensure all buttons follow theme colors */
-    .btn--outline-primary {
-      color: var(--color-primary, #0e3147) !important;
-      border-color: var(--color-primary, #0e3147) !important;
-      background-color: transparent !important;
-    }
-    
-    .btn--primary {
-      background-color: var(--color-primary, #0e3147) !important;
-      border-color: var(--color-primary, #0e3147) !important;
-      color: white !important;
-    }
-  </style>
 </head>
 <body>
   <!-- Skip to content link for accessibility -->

@@ -226,7 +226,82 @@
   }
 }
 
-/* Better spacing for event sections */
+/* Modal event date badge */
+.event-modal .event-date {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Filter button group */
+.event-filter {
+  margin-bottom: 20px;
+}
+
+.event-filter .btn {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  transition: all 0.2s ease;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+.event-filter .btn.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.event-filter .btn--primary:hover {
+  background-color: var(--color-primary-dark, #0a2833) !important;
+  border-color: var(--color-primary-dark, #0a2833) !important;
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.event-filter .btn--outline-primary:hover {
+  background-color: var(--color-primary, #0e3147) !important;
+  border-color: var(--color-primary, #0e3147) !important;
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+
+.event-filter .btn.active:hover {
+  background-color: var(--color-primary-dark, #0a2833) !important;
+  color: white !important;
+}
+
+/* Empty state message */
+.no-events-message {
+  border-left: 4px solid #ddd;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 0.25rem;
+  font-style: italic;
+  color: #666;
+}
+
+/* Loading pulse animation */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.loading {
+  animation: pulse 1.5s infinite;
+  background-color: #f0f0f0;
+  border-radius: 0.25rem;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
 .events-list, .row.g-3 {
   margin-bottom: 1rem;
 }

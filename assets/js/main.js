@@ -431,6 +431,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Initialize Gallery features if on gallery page
   initializeGallery();
+
+  // Mark decorative section dividers as hidden from assistive technology
+  document.querySelectorAll('.section-divider, .section-divider-alt, .gradient-divider, .ornament-divider').forEach(function (el) {
+    el.setAttribute('aria-hidden', 'true');
+    el.setAttribute('role', 'presentation');
+  });
   
   // Additional initialization for back-to-top when using Live Server
   window.addEventListener('load', function() {
